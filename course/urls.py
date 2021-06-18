@@ -15,6 +15,7 @@ urlpatterns = [
  path('course/',CourseView.as_view()),
  path('course/recommend',CourseRecommend.as_view()),
  path('course/upload',CourseUpload.as_view()),
+ path('course/resource/',CourseResource.as_view()),
  re_path('course/(?P<pk>\\d+)',CourseObjectView.as_view({"get": "retrieve", "delete": "destroy", "put": "update"}))
 ]
 

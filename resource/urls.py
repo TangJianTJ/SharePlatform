@@ -12,8 +12,8 @@ from django.urls import path,re_path
 from .views import *
 
 urlpatterns = [
-    path('uploadFiles',FileUploadView.as_view()),
-    re_path('downloadFiles/(?P<resource_id>[0-9]+)',FileDownloadView.as_view()),
+    path('course/uploadFiles/',FileUploadView.as_view()),
+    re_path('course/resource/download/(?P<resource_id>\\d+)',FileDownloadView.as_view()),
     path('downloadFiles',FileDownloadView.as_view()),
     path('preview/',preview)
 ]

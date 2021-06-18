@@ -39,13 +39,13 @@ class FileUploadView(APIView):
         """
         if args.get('role') == 'student':
             return Response({'code': 401, 'msg': 'you have no authority'}, status=200)
-        files = request.FILES.getlist('files', None)  # 获取上传文件列表
+        files = request.FILES.getlist('file', None)  # 获取上传文件列表
         if not files:
             return Response({'code': 400, 'msg': 'no files upload'},status=200)
-        course_id = request.data.get('cno')
+        course_id = request.query_params.get('id')
         file_owner = Teacher.objects.get(uid = args.get('uid'))
         print(course_id)
-        course = Course.objects.filter(cno=course_id).first()
+        course = Course.objects.get(id=course_id)
         self.path = os.path.join(self.path,course.name)  # 以课程名为文件夹名
         if not os.path.exists(self.path):
             self.logger.info('folder is not exist')
@@ -82,6 +82,7 @@ class FileDownloadView(APIView):
         resource = Resource.objects.get(pk=resource_id)
         self.path = os.path.join(self.path,resource.path)
         file_name = resource.name
+
         if not os.path.exists(self.path):
             return Response({'code': 404,'msg':'资源找不到'},status = 404)
         self.logger.info('下载' + file_name)

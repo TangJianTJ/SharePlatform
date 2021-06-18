@@ -1,5 +1,6 @@
 import logging
 import os
+import re
 from django.core.paginator import Paginator
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -7,7 +8,9 @@ from .serializers import CourseSerializers
 from login.login_token import *
 from .models import Course
 from rest_framework.viewsets import ModelViewSet
-from SharePlatform.settings import MEDIA_ROOT
+from SharePlatform.settings import MEDIA_ROOT,BASE_URL
+from resource.models import Resource
+from resource.serializers import ResourceSerializers
 
 # Create your views here.
 """"
@@ -17,13 +20,15 @@ from SharePlatform.settings import MEDIA_ROOT
 
 class CourseView(APIView):
     path = os.path.join(MEDIA_ROOT,os.path.join('images','course'))
-    baseUrl = 'http://192.168.0.105:8000/media/'
+    baseUrl = BASE_URL
+
     @resolve_token
     def post(self,request,args):
         data = {'code': 401}
         course = request.data.copy()           # query_dict不可变，从此需要copy
         course['owner_id'] = args.get('uid')  # 创建人的uid
-        #course['owner_name'] = args.get('name')  # 创建人的name
+        # course['owner_name'] = args.get('name')  # 创建人的name
+        course['overview'] = re.match(r'(<p.*?>)([\s\S].*?)</p>',request.data.get('overview')).group(2)  # 获取<p>标签内部文字
         image_name= os.path.split(course.get('image'))[1]
         course['image'] = 'images/course' + '/' + image_name
         if args.get('role',None) == 'student':
@@ -52,10 +57,18 @@ class CourseView(APIView):
         return Response(data,status=401)
 
     def get(self,request):
+        """
+        获取查询课程
+        :param request: current,limit,query
+        :return: list
+        """
         page = request.query_params.get('current')
         limit = request.query_params.get('limit')
         query = request.data.get('query')
-        courses = Course.objects.all()
+        if len(query) >0:
+            courses = Course.objects(name__icontains='query')
+        else:
+            courses = Course.objects.all()
         paginator = Paginator(courses, limit)  # 分别是需要分页的数据 和多少行数据为一页
         pag_count = paginator.num_pages  # 获取整个表的总页数
         if pag_count < int(page):
@@ -66,7 +79,7 @@ class CourseView(APIView):
 
 
 class CourseObjectView(ModelViewSet):
-    baseUrl = 'http://192.168.0.105:8000/media/'
+    baseUrl = BASE_URL
     permission_classes = []
     queryset = Course.objects.all()
     serializer_class = CourseSerializers
@@ -80,8 +93,11 @@ class CourseObjectView(ModelViewSet):
     def update(self, request, *args, **kwargs):
         partial = kwargs.pop('partial', False)
         print(request.data)
+        data = request.data.copy()
         instance = self.get_object()
-        serializer = self.get_serializer(instance, data=request.data, partial=partial)
+        image_name = os.path.split(data.get('image'))[1]
+        data['image'] = 'images/course' + '/' + image_name
+        serializer = self.get_serializer(instance, data=data, partial=partial)
         serializer.is_valid(raise_exception=True)
         self.perform_update(serializer)
         if getattr(instance, '_prefetched_objects_cache', None):
@@ -95,7 +111,8 @@ class CourseObjectView(ModelViewSet):
 
 
 class CourseRecommend(APIView):
-    baseUrl = 'http://192.168.0.105:8000/media/'
+    baseUrl = BASE_URL
+
     def get(self, request):
 
         courses = Course.objects.all()
@@ -107,7 +124,7 @@ class CourseRecommend(APIView):
 
 class CourseUpload(APIView):
     permission_classes = []
-    baseUrl = 'http://192.168.0.105:8000/media/'
+    baseUrl = BASE_URL
     path = os.path.join(MEDIA_ROOT, os.path.join('images', 'course'))
     logger = logging.getLogger('course.views')
 
@@ -127,6 +144,24 @@ class CourseUpload(APIView):
         else:
             return Response({'code':400,'msg':'上传失败！'},status=400)
 
+
+class CourseResource(APIView):
+    permission_classes = []
+
+    def get(self,request):
+        course_id = request.query_params.get('id')
+        print(course_id)
+        if course_id:
+            course = Course.objects.get(id=course_id)
+            resource_list = Resource.objects.filter(course=course)
+            if len(resource_list) >0:
+                serializers = ResourceSerializers(resource_list, many=True)
+                logger.info('获取资源列表成功')
+                return Response({'code':201,'msg':'获取资源列表成功！','data':serializers.data},status=200)
+            else:
+                return Response({'code': 200, 'msg': '暂无课程资源', 'data': []}, status=200)
+        else:
+            return Response({'code':400,'msg':'请求参数错误！'},status=400)
 
 
 

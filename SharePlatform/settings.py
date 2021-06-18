@@ -15,7 +15,7 @@ from mongoengine import connect
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
-
+BASE_URL = 'http://192.168.0.105:8000/media/'
 # logging配置
 log_file = os.path.join(BASE_DIR,'logs')
 log_file_path = os.path.join(log_file, 'all.log')

@@ -7,6 +7,7 @@ from login.login_token import *
 from .models import *
 from course.models import Course
 from course.serializers import CourseSerializers
+from SharePlatform.settings import BASE_URL
 # Create your views here.
 
 logger = logging.getLogger('user.views')
@@ -51,7 +52,7 @@ class UserView(APIView):
 
 
 class UserCoursers(APIView):
-    baseUrl = 'http://192.168.0.105:8000/media/'
+    baseUrl = BASE_URL
     course_list = []
 
     @resolve_token
@@ -67,7 +68,7 @@ class UserCoursers(APIView):
             self.course_list = Course.objects.filter(owner_id=uid)
         elif args.get('role') == 'student':
             uid = args.get('uid')
-            self.course_list = Student.objects.get(uid=uid)[0].add_course
+            self.course_list = Student.objects.get(uid=uid).add_course
         else:
             return Response({'code':403,'msg':'未授权的请求'},status=403)
         for course in self.course_list:
@@ -94,6 +95,7 @@ class AddCourse(APIView):
             course = Course.objects.get(id=course_id)
             if course in course_list:
                 is_add = 1
+        logger.info('is_add'+str(is_add))
         return Response({'code':'200','msg':'请求成功！','is_add':is_add},status=200)
 
     @resolve_token
@@ -107,7 +109,7 @@ class AddCourse(APIView):
         data = {'code':400}
         if args.get('role') == 'student':
             uid = args.get('uid')
-            course_id = request.data.get('id',None)
+            course_id = request.data.get('course_id',None)
             student = Student.objects.get(uid=uid)
             if course_id:
                 course = Course.objects.get(id=course_id)

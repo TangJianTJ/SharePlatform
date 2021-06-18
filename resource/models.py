@@ -21,6 +21,7 @@ class Resource(Document):
     download_count = IntField(default=0,verbose_name='下载次数')
     course = ReferenceField(Course)   # 资源对应的课程
     meta = {'collection': 'resource'}  # 数据库中的集合
+
     @staticmethod
     def save_resource(file, course, owner):
         """

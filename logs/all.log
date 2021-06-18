@@ -2175,3 +2175,910 @@ RuntimeError: You called this URL via POST, but the URL doesn't end in a slash a
 2021-06-13 23:03:34,204  [WARNING] 6352 --- [Thread-14] [django.request:230][log:log_response]: Not Found: /course/getMycourse
 2021-06-13 23:03:56,596  [WARNING] 6352 --- [Thread-14] [django.request:230][log:log_response]: Not Found: /teacher/getTeacher/teacher-token
 2021-06-13 23:04:23,017  [WARNING] 6352 --- [Thread-14] [django.request:230][log:log_response]: Not Found: /teacher/getTeacher/teacher-token
+2021-06-14 21:41:34,596  [INFO] 14352 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-14 21:45:38,031  [WARNING] 14352 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /teacher/updateCourseInfo
+2021-06-14 21:47:32,908  [ERROR] 8116 --- [Thread-7] [django.request:230][log:log_response]: Internal Server Error: /course
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\utils\deprecation.py", line 113, in __call__
+    response = self.process_request(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\middleware\common.py", line 54, in process_request
+    path = self.get_full_path_with_slash(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\middleware\common.py", line 94, in get_full_path_with_slash
+    'url': request.get_host() + new_path,
+RuntimeError: You called this URL via PUT, but the URL doesn't end in a slash and you have APPEND_SLASH set. Django can't redirect to the slash URL while maintaining PUT data. Change your form to point to 192.168.0.105:8000/course/ (note the trailing slash), or set APPEND_SLASH=False in your Django settings.
+2021-06-14 21:55:01,044  [INFO] 7404 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-14 21:57:09,610  [WARNING] 7404 --- [Thread-1] [django.request:230][log:log_response]: Method Not Allowed: /course/
+2021-06-14 21:57:13,764  [WARNING] 7404 --- [Thread-1] [django.request:230][log:log_response]: Method Not Allowed: /course/
+2021-06-14 21:57:37,806  [WARNING] 7404 --- [Thread-1] [django.request:230][log:log_response]: Method Not Allowed: /course/
+2021-06-14 21:59:48,616  [WARNING] 7404 --- [Thread-1] [django.request:230][log:log_response]: Method Not Allowed: /course/
+2021-06-14 22:00:06,465  [WARNING] 7404 --- [Thread-1] [django.request:230][log:log_response]: Bad Request: /course/2
+2021-06-14 22:01:48,953  [WARNING] 7404 --- [Thread-1] [django.request:230][log:log_response]: Bad Request: /course/2
+2021-06-14 22:03:14,627  [ERROR] 1148 --- [Thread-5] [django.request:230][log:log_response]: Internal Server Error: /media/http://192.168.43.135:8000/media/images/course/python.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\static.py", line 37, in serve
+    if fullpath.is_dir():
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1373, in is_dir
+    return S_ISDIR(self.stat().st_mode)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1183, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: 'C:\\Users\\TJ\\PycharmProjects\\SharePlatform\\media\\http:\\192.168.43.135:8000\\media\\images\\course\\python.jpeg'
+2021-06-14 22:03:19,986  [WARNING] 6428 --- [Thread-6] [django.request:230][log:log_response]: Not Found: /course/getMycourse
+2021-06-14 22:03:20,004  [ERROR] 7464 --- [Thread-7] [django.request:230][log:log_response]: Internal Server Error: /media/http://192.168.43.135:8000/media/images/course/python.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\static.py", line 37, in serve
+    if fullpath.is_dir():
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1373, in is_dir
+    return S_ISDIR(self.stat().st_mode)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1183, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: 'C:\\Users\\TJ\\PycharmProjects\\SharePlatform\\media\\http:\\192.168.43.135:8000\\media\\images\\course\\python.jpeg'
+2021-06-14 22:06:54,495  [ERROR] 9668 --- [Thread-2] [django.request:230][log:log_response]: Internal Server Error: /media/http://192.168.43.135:8000/media/images/course/python.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\static.py", line 37, in serve
+    if fullpath.is_dir():
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1373, in is_dir
+    return S_ISDIR(self.stat().st_mode)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1183, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: 'C:\\Users\\TJ\\PycharmProjects\\SharePlatform\\media\\http:\\192.168.43.135:8000\\media\\images\\course\\python.jpeg'
+2021-06-14 22:07:19,025  [WARNING] 13580 --- [Thread-3] [django.request:230][log:log_response]: Not Found: /media//media/images/course/python.jpeg
+2021-06-14 22:07:21,138  [WARNING] 10964 --- [Thread-4] [django.request:230][log:log_response]: Not Found: /course/getMycourse
+2021-06-14 22:07:53,379  [WARNING] 10964 --- [Thread-4] [django.request:230][log:log_response]: Not Found: /course/getMycourse
+2021-06-14 22:07:53,476  [ERROR] 14628 --- [Thread-5] [django.request:230][log:log_response]: Internal Server Error: /media/http://192.168.43.135:8000/media/images/course/python.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\static.py", line 37, in serve
+    if fullpath.is_dir():
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1373, in is_dir
+    return S_ISDIR(self.stat().st_mode)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1183, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: 'C:\\Users\\TJ\\PycharmProjects\\SharePlatform\\media\\http:\\192.168.43.135:8000\\media\\images\\course\\python.jpeg'
+2021-06-14 22:08:12,137  [ERROR] 15680 --- [Thread-6] [django.request:230][log:log_response]: Internal Server Error: /media/http://192.168.43.135:8000/media/images/course/python.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\static.py", line 37, in serve
+    if fullpath.is_dir():
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1373, in is_dir
+    return S_ISDIR(self.stat().st_mode)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1183, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: 'C:\\Users\\TJ\\PycharmProjects\\SharePlatform\\media\\http:\\192.168.43.135:8000\\media\\images\\course\\python.jpeg'
+2021-06-14 22:08:15,153  [WARNING] 10964 --- [Thread-4] [django.request:230][log:log_response]: Not Found: /course/getMycourse
+2021-06-14 22:11:58,726  [INFO] 13492 --- [Thread-3] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-14 22:12:03,109  [WARNING] 17288 --- [Thread-4] [django.request:230][log:log_response]: Not Found: /course/getMycourse
+2021-06-14 22:12:13,950  [WARNING] 17288 --- [Thread-4] [django.request:230][log:log_response]: Not Found: /course/getMycourse
+2021-06-14 22:12:14,107  [ERROR] 15748 --- [Thread-5] [django.request:230][log:log_response]: Internal Server Error: /media/http://192.168.43.135:8000/media/images/course/python.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\static.py", line 37, in serve
+    if fullpath.is_dir():
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1373, in is_dir
+    return S_ISDIR(self.stat().st_mode)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1183, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: 'C:\\Users\\TJ\\PycharmProjects\\SharePlatform\\media\\http:\\192.168.43.135:8000\\media\\images\\course\\python.jpeg'
+2021-06-14 22:12:25,595  [WARNING] 17288 --- [Thread-4] [django.request:230][log:log_response]: Not Found: /course/getMycourse
+2021-06-14 22:12:25,718  [ERROR] 9972 --- [Thread-6] [django.request:230][log:log_response]: Internal Server Error: /media/http://192.168.43.135:8000/media/images/course/python.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\static.py", line 37, in serve
+    if fullpath.is_dir():
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1373, in is_dir
+    return S_ISDIR(self.stat().st_mode)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1183, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: 'C:\\Users\\TJ\\PycharmProjects\\SharePlatform\\media\\http:\\192.168.43.135:8000\\media\\images\\course\\python.jpeg'
+2021-06-14 22:13:39,556  [WARNING] 6632 --- [Thread-2] [django.request:230][log:log_response]: Not Found: /course/getMycourse
+2021-06-14 22:13:39,691  [ERROR] 2880 --- [Thread-3] [django.request:230][log:log_response]: Internal Server Error: /media/http://192.168.43.135:8000/media/images/course/python.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\static.py", line 37, in serve
+    if fullpath.is_dir():
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1373, in is_dir
+    return S_ISDIR(self.stat().st_mode)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\pathlib.py", line 1183, in stat
+    return self._accessor.stat(self)
+OSError: [WinError 123] 文件名、目录名或卷标语法不正确。: 'C:\\Users\\TJ\\PycharmProjects\\SharePlatform\\media\\http:\\192.168.43.135:8000\\media\\images\\course\\python.jpeg'
+2021-06-14 22:14:09,520  [INFO] 13096 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-14 22:14:19,678  [WARNING] 13096 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /course/getMycourse
+2021-06-14 22:14:19,703  [WARNING] 13200 --- [Thread-3] [django.request:230][log:log_response]: Not Found: /media/python.jpeg
+2021-06-14 22:15:23,017  [WARNING] 15956 --- [Thread-2] [django.request:230][log:log_response]: Not Found: /media/python.jpeg
+2021-06-14 22:15:35,526  [WARNING] 16520 --- [Thread-3] [django.request:230][log:log_response]: Not Found: /media/python.jpeg
+2021-06-14 22:16:02,410  [WARNING] 15520 --- [Thread-4] [django.request:230][log:log_response]: Not Found: /course/getMycourse
+2021-06-14 22:21:31,587  [WARNING] 14588 --- [Thread-2] [django.request:230][log:log_response]: Not Found: /course/getSource/2
+2021-06-14 22:21:31,623  [INFO] 2580 --- [Thread-1] [user.views:98][views:get]: is_add0
+2021-06-14 22:30:55,999  [WARNING] 11676 --- [Thread-5] [django.request:230][log:log_response]: Not Found: /course/getSource/4
+2021-06-14 22:30:56,181  [INFO] 9592 --- [Thread-4] [user.views:98][views:get]: is_add0
+2021-06-14 22:31:40,589  [WARNING] 7760 --- [Thread-2] [django.request:230][log:log_response]: Not Found: /course/getSource/2
+2021-06-14 22:31:40,590  [INFO] 7388 --- [Thread-3] [user.views:98][views:get]: is_add0
+2021-06-14 22:33:27,821  [INFO] 1228 --- [Thread-3] [user.views:98][views:get]: is_add0
+2021-06-14 22:34:40,623  [WARNING] 15680 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /teacher/getTeacher/teacher-token
+2021-06-14 22:35:58,008  [WARNING] 15680 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /teacher/getTeacher/teacher-token
+2021-06-14 22:36:44,618  [INFO] 1228 --- [Thread-3] [user.views:98][views:get]: is_add0
+2021-06-14 22:37:42,474  [WARNING] 6424 --- [Thread-2] [django.request:230][log:log_response]: Not Found: /teacher/getTeacher/teacher-token
+2021-06-14 22:40:34,180  [INFO] 17392 --- [Thread-4] [user.views:98][views:get]: is_add0
+2021-06-14 22:41:08,326  [INFO] 17392 --- [Thread-4] [user.views:98][views:get]: is_add0
+2021-06-14 22:42:42,751  [INFO] 10596 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-14 22:43:11,579  [INFO] 5772 --- [Thread-1] [user.views:98][views:get]: is_add0
+2021-06-14 22:44:54,361  [INFO] 10596 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-14 22:46:53,878  [INFO] 5772 --- [Thread-1] [user.views:98][views:get]: is_add0
+2021-06-14 22:46:54,004  [ERROR] 1576 --- [Thread-3] [django.request:230][log:log_response]: Internal Server Error: /course/resource/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 144, in get
+    return Response({'code':201,'msg':'获取资源列表成功！','data':serializers.data},status=200)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 745, in data
+    ret = super().data
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 664, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 664, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 502, in to_representation
+    attribute = field.get_attribute(instance)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\fields.py", line 457, in get_attribute
+    return get_attribute(instance, self.source_attrs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\fields.py", line 97, in get_attribute
+    instance = getattr(instance, attr)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\fields.py", line 1232, in __get__
+    raise DoesNotExist("Trying to dereference unknown document %s" % value)
+mongoengine.errors.DoesNotExist: Trying to dereference unknown document DBRef('course', '2')
+2021-06-14 22:47:33,680  [INFO] 10596 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-14 22:48:44,588  [INFO] 7724 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-14 22:49:31,853  [INFO] 13648 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-14 22:53:06,628  [INFO] 2372 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-14 22:54:49,968  [INFO] 5168 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-14 22:56:49,228  [INFO] 5168 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-14 23:00:09,560  [INFO] 256 --- [Thread-3] [user.views:98][views:get]: is_add0
+2021-06-14 23:12:35,803  [ERROR] 7120 --- [Thread-2] [django.request:230][log:log_response]: Internal Server Error: /course/uploadFiles/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 67, in dispatch
+    return super(FileUploadView, self).dispatch(request,*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 46, in post
+    file_owner = Teacher.objects.get(uid = args.get('uid'))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 120, in query
+    value = field.prepare_query_value(op, value)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\fields.py", line 2174, in prepare_query_value
+    return self.value_decorator(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2021-06-14 23:14:25,090  [INFO] 10424 --- [Thread-3] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-14 23:15:06,310  [ERROR] 1748 --- [Thread-4] [django.request:230][log:log_response]: Internal Server Error: /course/uploadFiles/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 67, in dispatch
+    return super(FileUploadView, self).dispatch(request,*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 46, in post
+    file_owner = Teacher.objects.get(uid = args.get('uid'))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 120, in query
+    value = field.prepare_query_value(op, value)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\fields.py", line 2174, in prepare_query_value
+    return self.value_decorator(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2021-06-14 23:19:29,450  [ERROR] 1748 --- [Thread-4] [django.request:230][log:log_response]: Internal Server Error: /course/uploadFiles/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 67, in dispatch
+    return super(FileUploadView, self).dispatch(request,*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 46, in post
+    file_owner = Teacher.objects.get(uid = args.get('uid'))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 120, in query
+    value = field.prepare_query_value(op, value)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\fields.py", line 2174, in prepare_query_value
+    return self.value_decorator(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2021-06-14 23:19:49,702  [WARNING] 1748 --- [Thread-4] [django.request:230][log:log_response]: Not Found: /teacher/getTeacher/teacher-token
+2021-06-14 23:23:48,888  [INFO] 12928 --- [Thread-1] [course.views:131][views:post]: 上传go.jpg成功！
+2021-06-14 23:23:52,004  [INFO] 15244 --- [Thread-3] [user.views:98][views:get]: is_add0
+2021-06-14 23:25:25,810  [ERROR] 17380 --- [Thread-4] [django.request:230][log:log_response]: Internal Server Error: /course/uploadFiles/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 67, in dispatch
+    return super(FileUploadView, self).dispatch(request,*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 46, in post
+    file_owner = Teacher.objects.get(uid = args.get('uid'))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 120, in query
+    value = field.prepare_query_value(op, value)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\fields.py", line 2174, in prepare_query_value
+    return self.value_decorator(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2021-06-14 23:28:03,041  [ERROR] 6048 --- [Thread-2] [django.request:230][log:log_response]: Internal Server Error: /course/uploadFiles/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 67, in dispatch
+    return super(FileUploadView, self).dispatch(request,*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 46, in post
+    file_owner = Teacher.objects.get(uid = args.get('uid'))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 120, in query
+    value = field.prepare_query_value(op, value)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\fields.py", line 2174, in prepare_query_value
+    return self.value_decorator(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2021-06-14 23:34:17,650  [ERROR] 16640 --- [Thread-2] [django.request:230][log:log_response]: Internal Server Error: /course/uploadFiles/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 67, in dispatch
+    return super(FileUploadView, self).dispatch(request,*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 46, in post
+    file_owner = Teacher.objects.get(uid = args.get('uid'))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 120, in query
+    value = field.prepare_query_value(op, value)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\fields.py", line 2174, in prepare_query_value
+    return self.value_decorator(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2021-06-14 23:36:17,028  [ERROR] 16640 --- [Thread-2] [django.request:230][log:log_response]: Internal Server Error: /course/uploadFiles/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 67, in dispatch
+    return super(FileUploadView, self).dispatch(request,*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\resource\views.py", line 46, in post
+    file_owner = Teacher.objects.get(uid = args.get('uid'))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 120, in query
+    value = field.prepare_query_value(op, value)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\fields.py", line 2174, in prepare_query_value
+    return self.value_decorator(value)
+TypeError: int() argument must be a string, a bytes-like object or a number, not 'NoneType'
+2021-06-14 23:38:20,555  [INFO] 16640 --- [Thread-2] [resource.views:55][views:post]: 上传python课设.docx
+2021-06-14 23:39:18,633  [INFO] 5772 --- [Thread-1] [user.views:98][views:get]: is_add0
+2021-06-17 14:26:31,509  [WARNING] 132 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /favicon.ico
+2021-06-17 14:30:04,573  [WARNING] 15908 --- [Thread-1] [django.request:230][log:log_response]: Forbidden: /course/recommend
+2021-06-17 14:30:33,310  [WARNING] 15908 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /cours/resource/
+2021-06-17 14:30:48,783  [WARNING] 15908 --- [Thread-1] [django.request:230][log:log_response]: Bad Request: /course/resource/
+2021-06-17 14:41:09,495  [ERROR] 3184 --- [Thread-1] [django.request:230][log:log_response]: Internal Server Error: /course/resource/
+Traceback (most recent call last):
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 144, in get
+    course = Course.objects.get(id=course_id)
+  File "E:\工程实践\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+2021-06-17 21:25:48,872  [INFO] 11348 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 21:26:35,093  [INFO] 8968 --- [Thread-5] [user.views:98][views:get]: is_add0
+2021-06-17 21:26:53,882  [WARNING] 8968 --- [Thread-5] [django.request:230][log:log_response]: Not Found: /course/downloadSource/6
+2021-06-17 21:31:08,714  [WARNING] 8968 --- [Thread-5] [django.request:230][log:log_response]: Not Found: /course/downloadSource/5
+2021-06-17 21:31:11,061  [WARNING] 8968 --- [Thread-5] [django.request:230][log:log_response]: Not Found: /course/downloadSource/4
+2021-06-17 21:31:28,274  [WARNING] 9532 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /course/downloadSource/2
+2021-06-17 21:32:16,326  [INFO] 4272 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-17 21:32:18,570  [WARNING] 16344 --- [Thread-3] [django.request:230][log:log_response]: Not Found: /course/resource/download/
+2021-06-17 21:35:40,491  [WARNING] 8712 --- [Thread-3] [django.request:230][log:log_response]: Not Found: /course/resource/download/4
+2021-06-17 21:36:28,528  [INFO] 8712 --- [Thread-3] [resource.views:87][views:get]: 下载python课设.docx
+2021-06-17 21:36:45,443  [INFO] 12748 --- [Thread-4] [user.views:98][views:get]: is_add0
+2021-06-17 21:37:23,561  [WARNING] 12056 --- [Thread-5] [django.request:230][log:log_response]: Not Found: /teacher/getTeacher/teacher-token
+2021-06-17 21:38:06,695  [INFO] 7444 --- [Thread-1] [user.views:98][views:get]: is_add0
+2021-06-17 21:38:26,163  [WARNING] 12108 --- [Thread-6] [django.request:230][log:log_response]: Not Found: /course/resource/download/
+2021-06-17 21:38:59,094  [WARNING] 8712 --- [Thread-3] [django.request:230][log:log_response]: Not Found: /course/resource/download/2
+2021-06-17 21:39:28,958  [WARNING] 12108 --- [Thread-6] [django.request:230][log:log_response]: Not Found: /course/resource/download/
+2021-06-17 21:39:30,227  [WARNING] 12108 --- [Thread-6] [django.request:230][log:log_response]: Not Found: /course/resource/download/
+2021-06-17 21:39:44,587  [INFO] 8712 --- [Thread-3] [resource.views:87][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:39:52,124  [INFO] 18184 --- [Thread-7] [resource.views:87][views:get]: 下载python课设.docx
+2021-06-17 21:40:02,257  [WARNING] 12108 --- [Thread-6] [django.request:230][log:log_response]: Not Found: /course/resource/download/
+2021-06-17 21:40:21,028  [WARNING] 9568 --- [Thread-8] [django.request:230][log:log_response]: Not Found: /course/resource/download/2
+2021-06-17 21:40:21,210  [WARNING] 13568 --- [Thread-13] [django.request:230][log:log_response]: Not Found: /favicon.ico
+2021-06-17 21:40:50,820  [INFO] 12748 --- [Thread-4] [user.views:98][views:get]: is_add0
+2021-06-17 21:40:53,375  [INFO] 7444 --- [Thread-1] [resource.views:87][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:41:31,868  [INFO] 17248 --- [Thread-1] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:41:45,507  [INFO] 14664 --- [Thread-3] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:43:36,079  [INFO] 13592 --- [Thread-5] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:43:46,387  [INFO] 10604 --- [Thread-6] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:44:14,681  [INFO] 5424 --- [Thread-8] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:44:24,627  [INFO] 15464 --- [Thread-9] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:44:30,438  [INFO] 15464 --- [Thread-9] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:44:51,869  [INFO] 4548 --- [Thread-10] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:44:57,405  [INFO] 18340 --- [Thread-11] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:44:57,546  [INFO] 13632 --- [Thread-12] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:46:32,004  [INFO] 15548 --- [Thread-13] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:46:34,816  [INFO] 4780 --- [Thread-15] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:46:49,130  [INFO] 4780 --- [Thread-15] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:46:52,596  [INFO] 4780 --- [Thread-15] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:47:28,913  [INFO] 13864 --- [Thread-16] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:47:37,726  [INFO] 13864 --- [Thread-16] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:47:42,420  [INFO] 17624 --- [Thread-17] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:47:57,908  [INFO] 3884 --- [Thread-18] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:48:05,249  [INFO] 11148 --- [Thread-19] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:48:16,335  [INFO] 11148 --- [Thread-19] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:48:32,299  [INFO] 17072 --- [Thread-20] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:48:42,016  [INFO] 17072 --- [Thread-20] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:49:00,002  [INFO] 17072 --- [Thread-20] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:49:11,358  [INFO] 5408 --- [Thread-22] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:49:59,672  [INFO] 18252 --- [Thread-24] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 21:50:07,818  [INFO] 8292 --- [Thread-29] [user.views:98][views:get]: is_add0
+2021-06-17 21:50:12,855  [INFO] 8292 --- [Thread-29] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:50:23,082  [INFO] 16712 --- [Thread-30] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:50:30,106  [INFO] 18252 --- [Thread-24] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:51:42,291  [INFO] 14796 --- [Thread-36] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 21:52:08,192  [INFO] 13020 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-17 21:52:17,889  [INFO] 4600 --- [Thread-1] [user.views:98][views:get]: is_add0
+2021-06-17 21:52:19,787  [INFO] 13020 --- [Thread-2] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:54:24,869  [INFO] 4600 --- [Thread-1] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:54:37,076  [INFO] 14840 --- [Thread-5] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:55:16,009  [INFO] 3828 --- [Thread-3] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:55:26,218  [INFO] 13888 --- [Thread-4] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:55:33,574  [INFO] 14680 --- [Thread-7] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:55:49,917  [INFO] 16112 --- [Thread-9] [user.views:98][views:get]: is_add0
+2021-06-17 21:55:53,132  [INFO] 17352 --- [Thread-10] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:56:15,884  [INFO] 16112 --- [Thread-9] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 21:58:16,694  [INFO] 264 --- [Thread-11] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:58:16,807  [INFO] 7308 --- [Thread-12] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:58:24,609  [INFO] 10088 --- [Thread-13] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:58:55,160  [INFO] 14528 --- [Thread-14] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:59:03,289  [INFO] 5620 --- [Thread-15] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 21:59:06,361  [INFO] 17660 --- [Thread-16] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 21:59:13,760  [INFO] 14244 --- [Thread-18] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:59:13,929  [INFO] 15280 --- [Thread-20] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:59:16,487  [INFO] 10844 --- [Thread-21] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 21:59:19,422  [INFO] 10884 --- [Thread-17] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 21:59:32,106  [INFO] 6860 --- [Thread-22] [user.views:98][views:get]: is_add0
+2021-06-17 21:59:43,258  [INFO] 6580 --- [Thread-23] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:00:44,433  [INFO] 796 --- [Thread-24] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:01:01,467  [INFO] 17072 --- [Thread-26] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:01:11,507  [INFO] 3588 --- [Thread-27] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:01:12,921  [INFO] 16456 --- [Thread-28] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:01:28,464  [INFO] 9468 --- [Thread-30] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:02:02,741  [INFO] 13516 --- [Thread-32] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:02:16,946  [INFO] 13888 --- [Thread-33] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:02:51,293  [INFO] 2936 --- [Thread-37] [user.views:98][views:get]: is_add0
+2021-06-17 22:03:36,819  [INFO] 14148 --- [Thread-38] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:04:07,156  [INFO] 15548 --- [Thread-39] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:04:28,940  [INFO] 10148 --- [Thread-40] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:05:10,986  [INFO] 17072 --- [Thread-43] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:07:04,628  [INFO] 14156 --- [Thread-45] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:07:04,699  [INFO] 11408 --- [Thread-46] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:07:06,680  [INFO] 11376 --- [Thread-47] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:07:09,702  [INFO] 17936 --- [Thread-48] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:07:09,758  [INFO] 17512 --- [Thread-49] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:08:31,680  [INFO] 3744 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:08:34,702  [INFO] 6860 --- [Thread-5] [user.views:98][views:get]: is_add0
+2021-06-17 22:08:41,284  [INFO] 6860 --- [Thread-5] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:08:57,219  [INFO] 3824 --- [Thread-7] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:08:57,246  [INFO] 9900 --- [Thread-8] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:08:58,473  [INFO] 8332 --- [Thread-9] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:09:00,438  [INFO] 5432 --- [Thread-6] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:09:12,473  [INFO] 3744 --- [Thread-1] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:10:12,185  [INFO] 17116 --- [Thread-11] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:10:22,910  [INFO] 2144 --- [Thread-12] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:10:23,111  [INFO] 9720 --- [Thread-13] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:10:42,410  [INFO] 1360 --- [Thread-14] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:10:42,529  [INFO] 17920 --- [Thread-15] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:10:44,590  [INFO] 9468 --- [Thread-16] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:10:56,196  [INFO] 13180 --- [Thread-17] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:10:56,297  [INFO] 15212 --- [Thread-18] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:10:58,001  [INFO] 10328 --- [Thread-19] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:11:07,310  [INFO] 16748 --- [Thread-20] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:11:07,551  [INFO] 5236 --- [Thread-21] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:11:09,073  [INFO] 4980 --- [Thread-22] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:12:18,937  [INFO] 14732 --- [Thread-23] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:12:19,891  [INFO] 6472 --- [Thread-26] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:12:20,145  [INFO] 9648 --- [Thread-27] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:12:47,152  [INFO] 12184 --- [Thread-29] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:12:48,325  [INFO] 12228 --- [Thread-30] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:12:49,058  [INFO] 12356 --- [Thread-31] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:13:24,174  [INFO] 13324 --- [Thread-28] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:14:01,699  [INFO] 5716 --- [Thread-33] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:14:21,601  [INFO] 4076 --- [Thread-34] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:14:28,581  [INFO] 10372 --- [Thread-35] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:15:30,177  [INFO] 10388 --- [Thread-38] [user.views:98][views:get]: is_add0
+2021-06-17 22:15:34,973  [INFO] 7332 --- [Thread-39] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:15:37,912  [INFO] 16600 --- [Thread-40] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:15:38,538  [INFO] 15620 --- [Thread-41] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:15:38,797  [INFO] 17812 --- [Thread-42] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:15:42,684  [INFO] 16496 --- [Thread-43] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:15:49,939  [INFO] 11384 --- [Thread-44] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:16:10,957  [INFO] 7864 --- [Thread-45] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:17:08,423  [INFO] 5712 --- [Thread-46] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:17:12,791  [INFO] 5748 --- [Thread-51] [user.views:98][views:get]: is_add0
+2021-06-17 22:17:14,772  [INFO] 5712 --- [Thread-46] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:17:39,444  [INFO] 7580 --- [Thread-50] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:18:03,090  [INFO] 4644 --- [Thread-52] [user.views:98][views:get]: is_add0
+2021-06-17 22:18:09,608  [INFO] 14512 --- [Thread-53] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:20:51,962  [INFO] 3080 --- [Thread-54] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:21:09,897  [INFO] 17564 --- [Thread-56] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:21:09,950  [INFO] 7816 --- [Thread-57] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:21:10,239  [INFO] 14812 --- [Thread-58] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:21:28,568  [INFO] 10972 --- [Thread-59] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:21:28,632  [INFO] 12708 --- [Thread-60] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:21:28,677  [INFO] 18272 --- [Thread-61] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:21:32,358  [INFO] 8500 --- [Thread-62] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:21:40,372  [INFO] 7852 --- [Thread-63] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:21:52,550  [INFO] 12168 --- [Thread-64] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:22:14,312  [INFO] 3264 --- [Thread-67] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:22:20,710  [INFO] 18088 --- [Thread-70] [user.views:98][views:get]: is_add0
+2021-06-17 22:22:28,913  [INFO] 6580 --- [Thread-69] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:22:29,058  [INFO] 4228 --- [Thread-71] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:22:29,127  [INFO] 15032 --- [Thread-72] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:22:33,429  [INFO] 5992 --- [Thread-68] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:22:57,431  [INFO] 15656 --- [Thread-73] [user.views:98][views:get]: is_add0
+2021-06-17 22:22:59,036  [INFO] 10516 --- [Thread-74] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:23:06,265  [INFO] 15656 --- [Thread-73] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:23:07,117  [INFO] 13004 --- [Thread-75] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:23:07,530  [INFO] 8740 --- [Thread-76] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:23:14,611  [INFO] 18088 --- [Thread-70] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:23:20,242  [INFO] 3216 --- [Thread-77] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:23:51,148  [INFO] 3848 --- [Thread-80] [user.views:98][views:get]: is_add0
+2021-06-17 22:23:52,861  [INFO] 8320 --- [Thread-82] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:24:35,321  [INFO] 14612 --- [Thread-83] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:24:40,801  [INFO] 3848 --- [Thread-80] [user.views:98][views:get]: is_add0
+2021-06-17 22:24:43,354  [INFO] 16064 --- [Thread-84] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:24:44,787  [INFO] 9236 --- [Thread-86] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:24:45,365  [INFO] 16504 --- [Thread-87] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:25:00,322  [INFO] 3848 --- [Thread-80] [user.views:98][views:get]: is_add0
+2021-06-17 22:25:03,192  [INFO] 7564 --- [Thread-85] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:26:34,940  [INFO] 5620 --- [Thread-81] [user.views:98][views:get]: is_add0
+2021-06-17 22:26:36,933  [INFO] 7500 --- [Thread-91] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:26:37,679  [INFO] 4188 --- [Thread-92] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:26:37,913  [INFO] 1616 --- [Thread-93] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:26:41,736  [INFO] 7392 --- [Thread-90] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:26:49,843  [INFO] 16420 --- [Thread-94] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:26:53,369  [INFO] 468 --- [Thread-96] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:26:54,650  [INFO] 5108 --- [Thread-97] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:27:14,427  [INFO] 3500 --- [Thread-95] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:28:59,717  [INFO] 8348 --- [Thread-101] [user.views:98][views:get]: is_add0
+2021-06-17 22:29:05,011  [INFO] 12764 --- [Thread-103] [resource.views:88][views:get]: 下载Python课程报告统一规范.pdf
+2021-06-17 22:29:08,037  [INFO] 8944 --- [Thread-104] [resource.views:88][views:get]: 下载python课设.docx
+2021-06-17 22:29:10,170  [INFO] 16224 --- [Thread-105] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:31:59,200  [INFO] 8992 --- [Thread-108] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:31:59,260  [INFO] 15540 --- [Thread-109] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:32:00,783  [INFO] 3080 --- [Thread-110] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:32:41,840  [INFO] 17448 --- [Thread-112] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:32:41,948  [INFO] 18296 --- [Thread-113] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:32:47,098  [INFO] 10220 --- [Thread-114] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:33:16,290  [INFO] 8332 --- [Thread-116] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:33:16,362  [INFO] 3696 --- [Thread-117] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 22:34:02,123  [INFO] 9460 --- [Thread-118] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:34:04,667  [INFO] 9460 --- [Thread-118] [user.views:98][views:get]: is_add0
+2021-06-17 22:37:22,791  [INFO] 9460 --- [Thread-118] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:38:22,513  [INFO] 9460 --- [Thread-118] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:39:22,786  [INFO] 9460 --- [Thread-118] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:43:25,029  [INFO] 9460 --- [Thread-118] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:48:19,176  [INFO] 14884 --- [Thread-119] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:53:37,405  [INFO] 15036 --- [Thread-120] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:54:09,463  [INFO] 15036 --- [Thread-120] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:56:59,328  [INFO] 15036 --- [Thread-120] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-17 22:57:20,460  [WARNING] 15036 --- [Thread-120] [django.request:230][log:log_response]: Unauthorized: /user/login
+2021-06-17 22:57:46,998  [INFO] 15036 --- [Thread-120] [login.views:81][views:post]: studentsa20226666注册成功！
+2021-06-17 22:59:04,978  [INFO] 15036 --- [Thread-120] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-17 22:59:04,979  [INFO] 15036 --- [Thread-120] [login.views:36][views:post]: login success
+2021-06-17 22:59:10,978  [ERROR] 15036 --- [Thread-120] [django.request:230][log:log_response]: Internal Server Error: /course/add/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\user\views.py", line 95, in get
+    course = Course.objects.get(id=course_id)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 120, in query
+    value = field.prepare_query_value(op, value)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\fields.py", line 2174, in prepare_query_value
+    return self.value_decorator(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+2021-06-17 23:01:15,507  [INFO] 11620 --- [Thread-121] [resource.views:88][views:get]: 下载Python语言程序设计-Liang （ 斯坦福教材） .pdf
+2021-06-17 23:07:36,183  [INFO] 2244 --- [Thread-124] [user.views:98][views:get]: is_add0
+2021-06-17 23:08:12,337  [INFO] 2244 --- [Thread-124] [user.views:98][views:get]: is_add0
+2021-06-17 23:09:13,169  [INFO] 2244 --- [Thread-124] [user.views:98][views:get]: is_add0
+2021-06-17 23:13:43,101  [INFO] 4012 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-17 23:15:06,193  [INFO] 4012 --- [Thread-2] [user.views:98][views:get]: is_add0
+2021-06-17 23:15:07,734  [INFO] 14688 --- [Thread-3] [user.views:121][views:post]: 用户sa20226666成功添加课程c++程序设计
+2021-06-17 23:16:52,706  [INFO] 2780 --- [Thread-7] [user.views:98][views:get]: is_add0
+2021-06-17 23:16:57,319  [INFO] 7280 --- [Thread-9] [user.views:98][views:get]: is_add1
+2021-06-17 23:17:34,606  [INFO] 9964 --- [Thread-10] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-17 23:17:34,607  [INFO] 9964 --- [Thread-10] [login.views:36][views:post]: login success
+2021-06-17 23:17:38,661  [INFO] 8776 --- [Thread-11] [user.views:98][views:get]: is_add1
+2021-06-17 23:17:53,969  [INFO] 17388 --- [Thread-14] [user.views:98][views:get]: is_add1
+2021-06-17 23:19:15,493  [INFO] 13436 --- [Thread-17] [user.views:98][views:get]: is_add1
+2021-06-17 23:22:03,569  [INFO] 2084 --- [Thread-21] [user.views:98][views:get]: is_add1
+2021-06-17 23:22:36,229  [INFO] 11772 --- [Thread-20] [user.views:98][views:get]: is_add0
+2021-06-17 23:22:37,043  [INFO] 14324 --- [Thread-19] [user.views:121][views:post]: 用户sa20226666成功添加课程java程序设计
+2021-06-17 23:22:41,790  [INFO] 2084 --- [Thread-21] [user.views:98][views:get]: is_add1
+2021-06-17 23:22:45,603  [INFO] 11772 --- [Thread-20] [user.views:98][views:get]: is_add1
+2021-06-17 23:22:48,717  [INFO] 14324 --- [Thread-19] [user.views:98][views:get]: is_add1
+2021-06-17 23:23:04,860  [INFO] 1900 --- [Thread-23] [user.views:98][views:get]: is_add1
+2021-06-17 23:23:09,013  [INFO] 9420 --- [Thread-22] [user.views:98][views:get]: is_add1
+2021-06-17 23:23:17,313  [INFO] 9420 --- [Thread-22] [user.views:98][views:get]: is_add0
+2021-06-17 23:23:19,686  [INFO] 1900 --- [Thread-23] [user.views:121][views:post]: 用户sa20226666成功添加课程Python
+2021-06-17 23:23:23,655  [INFO] 9420 --- [Thread-22] [user.views:98][views:get]: is_add1
+2021-06-17 23:23:46,382  [WARNING] 11876 --- [Thread-24] [django.request:230][log:log_response]: Not Found: /student/getStudent
+2021-06-17 23:23:49,296  [ERROR] 11876 --- [Thread-24] [django.request:230][log:log_response]: Internal Server Error: /course/add/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\user\views.py", line 95, in get
+    course = Course.objects.get(id=course_id)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 120, in query
+    value = field.prepare_query_value(op, value)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\fields.py", line 2174, in prepare_query_value
+    return self.value_decorator(value)
+ValueError: invalid literal for int() with base 10: 'undefined'
+2021-06-17 23:26:27,644  [ERROR] 9036 --- [Thread-1] [django.request:230][log:log_response]: Internal Server Error: /user/course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\user\views.py", line 71, in get
+    self.course_list = Student.objects.get(uid=uid)[0].add_course
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\base\document.py", line 263, in __getitem__
+    raise KeyError(name)
+KeyError: 0
+2021-06-17 23:28:34,534  [INFO] 17524 --- [Thread-1] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-17 23:28:40,490  [INFO] 13672 --- [Thread-2] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-17 23:28:51,309  [INFO] 17524 --- [Thread-1] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-17 23:29:51,097  [INFO] 9820 --- [Thread-4] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-17 23:30:21,675  [INFO] 9820 --- [Thread-4] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-17 23:30:28,555  [INFO] 3792 --- [Thread-5] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-17 23:30:39,337  [INFO] 14364 --- [Thread-6] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-17 23:31:21,120  [WARNING] 14364 --- [Thread-6] [django.request:230][log:log_response]: Not Found: /student/getStudent
+2021-06-17 23:37:07,186  [INFO] 5592 --- [Thread-2] [login.views:53][views:post]: 教师sa20225555登录成功！

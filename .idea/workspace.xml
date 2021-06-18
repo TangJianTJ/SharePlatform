@@ -1,24 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39f192cd-2383-42f8-a5f7-4af556fc7738" name="Default Changelist" comment="add media">
-      <change afterPath="$PROJECT_DIR$/media/files/Python/Python课程报告统一规范.pdf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/course/cplus.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/course/defult.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/course/file.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/course/python.jpeg" afterDir="false" />
+    <list default="true" id="39f192cd-2383-42f8-a5f7-4af556fc7738" name="Default Changelist" comment="课程加入">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/files/Python/Python语言程序设计-Liang （ 斯坦福教材） .pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/files/Python/python课设.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/course/go.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resource/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SharePlatform/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/SharePlatform/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SharePlatform/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/SharePlatform/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/login_token.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/login_token.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/resource/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/resource/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resource/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/resource/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/user/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/serializers.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
@@ -140,7 +138,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/Documents/Tencent Files/2201287921/FileRecv/后端" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/media/files/Python" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -153,11 +151,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\media\files\Python" />
+      <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\resource" />
       <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\media\images\course" />
       <recent name="C:\Users\TJ\PycharmProjects\SharePlatform" />
       <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\media\images" />
-      <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\static\course" />
-      <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\user" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\TJ\PycharmProjects\SharePlatform\media\images\course" />
@@ -280,7 +278,10 @@
       <workItem from="1623389344781" duration="12336000" />
       <workItem from="1623482748487" duration="21610000" />
       <workItem from="1623564763883" duration="14575000" />
-      <workItem from="1623654936599" duration="11162000" />
+      <workItem from="1623654936599" duration="20366000" />
+      <workItem from="1623910423596" duration="13525000" />
+      <workItem from="1623985680332" duration="2263000" />
+      <workItem from="1623997376908" duration="3968000" />
     </task>
     <task id="LOCAL-00001" summary="add usercase">
       <created>1621498947980</created>
@@ -310,7 +311,14 @@
       <option name="project" value="LOCAL" />
       <updated>1622789033671</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="课程加入">
+      <created>1623675282536</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1623675282536</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -374,7 +382,8 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add usercase" />
     <MESSAGE value="add media" />
-    <option name="LAST_COMMIT_MESSAGE" value="add media" />
+    <MESSAGE value="课程加入" />
+    <option name="LAST_COMMIT_MESSAGE" value="课程加入" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/venv/Lib/site-packages/rest_framework_mongoengine/serializers.py">

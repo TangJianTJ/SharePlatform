@@ -15,6 +15,7 @@ class Student(Document):
     email = EmailField(verbose_name='邮箱')
     sex = IntField(default=0,verbose_name='性别') # man 0,woman 1
     major = StringField(max_length=20,required=False,verbose_name='专业')
+    phone = StringField(max_length=20)
     creat_time = StringField(max_length=50,verbose_name='创建时间',
                              default=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
     add_course = ListField(ReferenceField(Course))
@@ -28,6 +29,7 @@ class Teacher(Document):
     password = StringField(max_length=100,null=False)
     email = EmailField(verbose_name = '邮箱')
     phone = StringField(max_length=20)
+    sex = IntField(default=0, verbose_name='性别')  # man 0,woman 1
     major = StringField(max_length=20, required=False, verbose_name='专业')
     creat_time = StringField(max_length=50, verbose_name='创建时间',
                              default=datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S'))
