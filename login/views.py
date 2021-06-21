@@ -5,7 +5,7 @@ from user.models import *
 from user.serializers import StudentSerializers, TeacherSerializers
 from .login_token import *
 from django.contrib.auth.hashers import check_password
-
+from django.contrib.auth.hashers import make_password
 from django.views.decorators.csrf import csrf_exempt
 # Create your views here.
 
@@ -67,13 +67,16 @@ class RegisterView(APIView):
     def post(self,request):
         data ={'code':400}
         print(request.data)
+        user = request.data.copy()
+        if request.data.get('password'):
+            user['password'] = make_password(request.data.get('password'))
         if request.data.get('role') == 'student':
-            serializers = StudentSerializers(data=request.data)
+            serializers = StudentSerializers(data=user)
         else:
-            serializers = TeacherSerializers(data=request.data)
+            serializers = TeacherSerializers(data=user)
         try:
             if serializers.is_valid(raise_exception=True):
-                user = serializers.save()
+                serializers.save()
                 data['code'] = 201
                 data['msg'] = "注册成功！"
                 # role = serializers.validated_data.get('role')

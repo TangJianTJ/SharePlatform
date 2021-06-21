@@ -64,9 +64,9 @@ class CourseView(APIView):
         """
         page = request.query_params.get('current')
         limit = request.query_params.get('limit')
-        query = request.data.get('query')
+        query = request.query_params.get('query')
         if len(query) >0:
-            courses = Course.objects(name__icontains='query')
+            courses = Course.objects(name__icontains=query)
         else:
             courses = Course.objects.all()
         paginator = Paginator(courses, limit)  # 分别是需要分页的数据 和多少行数据为一页

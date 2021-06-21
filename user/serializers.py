@@ -11,13 +11,13 @@ class StudentSerializers(serializers.DocumentSerializer):
         model = Student
         fields = ('uid','username','password','name','sex','major','email','creat_time','role','phone')
 
-    def validate(self, attrs):
-        password = attrs.get('password')
-        if password:
-            attrs['password'] = make_password(password)
-        # else:
-        #     raise serializers.me_ValidationError('密码不能为空')
-        return attrs
+    # def validate(self, attrs):
+    #     password = attrs.get('password')
+    #     if password:
+    #         attrs['password'] = make_password(password)
+    #     # else:
+    #     #     raise serializers.me_ValidationError('密码不能为空')
+    #     return attrs
 
 
 class TeacherSerializers(serializers.DocumentSerializer):
@@ -27,10 +27,10 @@ class TeacherSerializers(serializers.DocumentSerializer):
         model = Teacher
         fields = ('uid','username','password','name','major','email','phone','creat_time','role','sex')
 
-    def validate(self, attrs):
-        password = attrs.get('password')
-        if password:
-            attrs['password'] = make_password(password)
-        # else:
-        #     raise serializers.me_ValidationError('密码不能为空')
-        return attrs
+    # def validate(self, attrs):
+    #     password = attrs.get('password')
+    #     if password:
+    #         attrs['password'] = make_password(password)
+    #     # else:
+    #     #     raise serializers.me_ValidationError('密码不能为空')
+    #     return attrs

@@ -3082,3 +3082,364 @@ KeyError: 0
 2021-06-17 23:30:39,337  [INFO] 14364 --- [Thread-6] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
 2021-06-17 23:31:21,120  [WARNING] 14364 --- [Thread-6] [django.request:230][log:log_response]: Not Found: /student/getStudent
 2021-06-17 23:37:07,186  [INFO] 5592 --- [Thread-2] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 21:24:23,800  [WARNING] 7916 --- [Thread-1] [django.request:230][log:log_response]: Unauthorized: /user/register
+2021-06-18 21:24:33,847  [INFO] 7916 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 21:25:38,237  [ERROR] 11276 --- [Thread-5] [django.request:230][log:log_response]: Internal Server Error: /course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 68, in get
+    if len(query) >0:
+TypeError: object of type 'NoneType' has no len()
+2021-06-18 21:25:43,090  [ERROR] 11276 --- [Thread-5] [django.request:230][log:log_response]: Internal Server Error: /course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 68, in get
+    if len(query) >0:
+TypeError: object of type 'NoneType' has no len()
+2021-06-18 21:25:49,665  [ERROR] 11276 --- [Thread-5] [django.request:230][log:log_response]: Internal Server Error: /course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 68, in get
+    if len(query) >0:
+TypeError: object of type 'NoneType' has no len()
+2021-06-18 21:25:59,179  [ERROR] 11276 --- [Thread-5] [django.request:230][log:log_response]: Internal Server Error: /course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 68, in get
+    if len(query) >0:
+TypeError: object of type 'NoneType' has no len()
+2021-06-18 21:28:36,864  [ERROR] 12052 --- [Thread-6] [django.request:230][log:log_response]: Internal Server Error: /course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 68, in get
+    if len(query) >0:
+TypeError: object of type 'NoneType' has no len()
+2021-06-18 21:33:12,492  [INFO] 14348 --- [Thread-2] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 21:33:18,842  [INFO] 14348 --- [Thread-2] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 21:33:23,680  [INFO] 14348 --- [Thread-2] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 21:36:26,627  [INFO] 1116 --- [Thread-4] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-18 21:36:26,628  [INFO] 1116 --- [Thread-4] [login.views:36][views:post]: login success
+2021-06-18 21:36:35,736  [INFO] 1116 --- [Thread-4] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-18 21:40:09,331  [INFO] 14560 --- [Thread-6] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 21:47:23,038  [INFO] 4180 --- [Thread-9] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-18 21:47:23,038  [INFO] 4180 --- [Thread-9] [login.views:36][views:post]: login success
+2021-06-18 21:47:26,506  [INFO] 4180 --- [Thread-9] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-18 21:50:39,508  [INFO] 16808 --- [Thread-10] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 21:51:12,277  [INFO] 9276 --- [Thread-11] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-18 21:51:12,277  [INFO] 9276 --- [Thread-11] [login.views:36][views:post]: login success
+2021-06-18 21:51:15,050  [INFO] 9276 --- [Thread-11] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-18 21:52:08,074  [INFO] 8976 --- [Thread-12] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 21:55:02,759  [INFO] 11596 --- [Thread-1] [course.views:142][views:post]: 上传1.jpg成功！
+2021-06-18 21:55:03,001  [ERROR] 8992 --- [Thread-3] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/1.jpg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 88, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-18 21:55:12,440  [INFO] 11596 --- [Thread-1] [course.views:142][views:post]: 上传1.jpg成功！
+2021-06-18 21:55:17,479  [INFO] 11596 --- [Thread-1] [course.views:142][views:post]: 上传go.jpg成功！
+2021-06-18 21:55:22,428  [INFO] 11596 --- [Thread-1] [course.views:142][views:post]: 上传1.jpg成功！
+2021-06-18 21:55:22,569  [ERROR] 11704 --- [Thread-4] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/1.jpg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 88, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-18 21:58:25,035  [INFO] 1168 --- [Thread-5] [course.views:142][views:post]: 上传1.jpg成功！
+2021-06-18 21:58:33,130  [INFO] 1168 --- [Thread-5] [course.views:142][views:post]: 上传1.jpg成功！
+2021-06-18 21:59:06,674  [INFO] 1168 --- [Thread-5] [course.views:142][views:post]: 上传software.jpg成功！
+2021-06-18 21:59:14,983  [INFO] 7920 --- [Thread-7] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 22:03:22,398  [INFO] 1168 --- [Thread-5] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 22:03:43,852  [INFO] 1168 --- [Thread-5] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 22:04:30,740  [INFO] 1168 --- [Thread-5] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 22:04:56,156  [INFO] 1168 --- [Thread-5] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 22:05:29,242  [INFO] 13728 --- [Thread-8] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 22:06:32,421  [INFO] 13728 --- [Thread-8] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 22:13:10,307  [INFO] 7632 --- [Thread-10] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 22:15:52,629  [INFO] 11324 --- [Thread-13] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 22:17:22,248  [INFO] 11448 --- [Thread-14] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-18 22:17:22,249  [INFO] 11448 --- [Thread-14] [login.views:36][views:post]: login success
+2021-06-18 22:17:25,815  [INFO] 11448 --- [Thread-14] [user.views:77][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-18 22:18:21,492  [INFO] 13960 --- [Thread-15] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 22:46:01,774  [INFO] 2572 --- [Thread-1] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 22:50:17,027  [INFO] 4452 --- [Thread-1] [user.views:49][views:put]: 修改sa20225555信息失败！
+2021-06-18 22:50:17,028  [WARNING] 4452 --- [Thread-1] [django.request:230][log:log_response]: Bad Request: /user/info/
+2021-06-18 22:54:16,249  [INFO] 17904 --- [Thread-2] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 22:55:19,336  [INFO] 11200 --- [Thread-1] [user.views:49][views:put]: 修改sa20225555信息失败！
+2021-06-18 22:55:19,337  [WARNING] 11200 --- [Thread-1] [django.request:230][log:log_response]: Bad Request: /user/info/
+2021-06-18 22:55:57,129  [INFO] 9788 --- [Thread-1] [user.views:49][views:put]: 修改sa20225555信息失败！
+2021-06-18 22:55:57,130  [WARNING] 9788 --- [Thread-1] [django.request:230][log:log_response]: Bad Request: /user/info/
+2021-06-18 22:59:11,315  [INFO] 17896 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 22:59:46,884  [INFO] 17356 --- [Thread-2] [user.views:45][views:put]: 修改sa20225555信息成功！
+2021-06-18 23:01:32,417  [WARNING] 10428 --- [Thread-4] [django.request:230][log:log_response]: Unauthorized: /user/login
+2021-06-18 23:01:37,744  [WARNING] 10428 --- [Thread-4] [django.request:230][log:log_response]: Unauthorized: /user/login
+2021-06-18 23:05:37,496  [INFO] 15744 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 23:05:45,134  [INFO] 15744 --- [Thread-1] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:06:10,692  [ERROR] 15744 --- [Thread-1] [django.request:230][log:log_response]: Internal Server Error: /user/info/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\user\views.py", line 41, in put
+    user = serializers.save()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 174, in save
+    'You must call `.is_valid()` before calling `.save()`.'
+AssertionError: You must call `.is_valid()` before calling `.save()`.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\user\views.py", line 49, in put
+    logger.info('修改' + serializers.data.get('username') + '信息失败！')
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 548, in data
+    ret = super().data
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 242, in data
+    raise AssertionError(msg)
+AssertionError: When a serializer is passed a `data` keyword argument you must call `.is_valid()` before attempting to access the serialized `.data` representation.
+You should either call `.is_valid()` first, or access `.initial_data` instead.
+2021-06-18 23:10:32,797  [INFO] 11976 --- [Thread-3] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 23:13:28,912  [INFO] 8624 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 23:13:38,205  [WARNING] 8624 --- [Thread-1] [django.request:230][log:log_response]: Bad Request: /user/info/
+2021-06-18 23:13:52,107  [WARNING] 8624 --- [Thread-1] [django.request:230][log:log_response]: Bad Request: /user/info/
+2021-06-18 23:14:10,859  [INFO] 8624 --- [Thread-1] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:18:02,858  [INFO] 13464 --- [Thread-2] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 23:18:44,960  [INFO] 13052 --- [Thread-3] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 23:19:19,771  [INFO] 6692 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 23:19:30,030  [INFO] 8224 --- [Thread-1] [user.views:45][views:put]: 修改sa20225555信息成功！
+2021-06-18 23:19:43,049  [INFO] 15464 --- [Thread-2] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 23:19:54,270  [INFO] 15464 --- [Thread-2] [user.views:45][views:put]: 修改sa20225555信息成功！
+2021-06-18 23:20:03,706  [INFO] 15464 --- [Thread-2] [user.views:77][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:21:51,611  [INFO] 12640 --- [Thread-3] [login.views:84][views:post]: teachersa20224444注册成功！
+2021-06-18 23:22:04,345  [INFO] 12640 --- [Thread-3] [login.views:53][views:post]: 教师sa20224444登录成功！
+2021-06-18 23:22:07,538  [ERROR] 12640 --- [Thread-3] [django.request:230][log:log_response]: Internal Server Error: /user/course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 426, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2021-06-18 23:22:18,714  [ERROR] 12640 --- [Thread-3] [django.request:230][log:log_response]: Internal Server Error: /user/course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 511, in dispatch
+    self.response = self.finalize_response(request, response, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 426, in finalize_response
+    % type(response)
+AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse` to be returned from the view, but received a `<class 'NoneType'>`
+2021-06-18 23:28:01,241  [INFO] 18084 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 23:28:06,158  [INFO] 3400 --- [Thread-3] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:28:23,591  [INFO] 9616 --- [Thread-4] [login.views:53][views:post]: 教师sa20224444登录成功！
+2021-06-18 23:28:53,817  [WARNING] 16760 --- [Thread-5] [django.request:230][log:log_response]: Bad Request: /user/info/
+2021-06-18 23:29:06,420  [WARNING] 16760 --- [Thread-5] [django.request:230][log:log_response]: Bad Request: /user/info/
+2021-06-18 23:29:27,358  [WARNING] 16240 --- [Thread-6] [django.request:230][log:log_response]: Bad Request: /user/info/
+2021-06-18 23:30:00,135  [INFO] 16240 --- [Thread-6] [user.views:45][views:put]: 修改sa20224444信息成功！
+2021-06-18 23:30:31,606  [INFO] 18300 --- [Thread-10] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 23:30:35,383  [INFO] 18300 --- [Thread-10] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:32:03,490  [INFO] 17256 --- [Thread-12] [resource.views:51][views:post]: folder is not exist
+2021-06-18 23:32:03,493  [INFO] 17256 --- [Thread-12] [resource.views:55][views:post]: 上传软件工程-码农的自我修养.pptx
+2021-06-18 23:32:13,702  [INFO] 2780 --- [Thread-11] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:32:16,965  [INFO] 472 --- [Thread-14] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:32:20,568  [INFO] 17256 --- [Thread-12] [resource.views:88][views:get]: 下载软件工程-码农的自我修养.pptx
+2021-06-18 23:32:42,827  [INFO] 600 --- [Thread-13] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:32:44,725  [INFO] 472 --- [Thread-14] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:34:29,246  [INFO] 2780 --- [Thread-11] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:34:41,939  [INFO] 10384 --- [Thread-16] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-18 23:34:44,897  [INFO] 9572 --- [Thread-18] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:34:54,110  [INFO] 15780 --- [Thread-17] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:34:58,096  [INFO] 9572 --- [Thread-18] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:35:53,870  [INFO] 15780 --- [Thread-17] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:37:06,002  [INFO] 3852 --- [Thread-20] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:37:43,049  [INFO] 12716 --- [Thread-19] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:37:45,108  [INFO] 3852 --- [Thread-20] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:37:46,884  [INFO] 11680 --- [Thread-21] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:38:07,966  [INFO] 3852 --- [Thread-20] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:38:30,398  [INFO] 11680 --- [Thread-21] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:39:21,520  [INFO] 12716 --- [Thread-19] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-18 23:39:44,759  [INFO] 11680 --- [Thread-21] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！

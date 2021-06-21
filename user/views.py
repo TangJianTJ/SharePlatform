@@ -19,11 +19,11 @@ class UserView(APIView):
     def get(self,request,args):
         if args.get('role') == 'student':
             student = Student.objects.filter(uid=args.get('uid')).first()
-            student.password = ''
+            #student.password = ''
             serializer = StudentSerializers(student)
         else:
             teacher = Teacher.objects.filter(uid=args.get('uid')).first()
-            teacher.password = ''
+            #teacher.password = ''
             serializer = TeacherSerializers(teacher)
         return Response({'code':200,'msg':'获取用户信息成功！','data':serializer.data},status=200)
 
@@ -41,12 +41,12 @@ class UserView(APIView):
                 user = serializers.save()
                 data['code'] = '200'
                 data['msg'] = '修改成功'
-                data['data'] = serializers.data
+               # data['data'] = serializers.data
                 logger.info('修改'+user.username+'信息成功！')
                 return Response(data,status=200)
         except Exception as e:
             data['msg'] = '修改失败'
-            logger.info('修改' + serializers.data.get('username') + '信息成功！')
+            #logger.info('修改' + serializers.data.get('username') + '信息失败！')
             print(e)
         return Response(data,status=400)
 
@@ -71,11 +71,13 @@ class UserCoursers(APIView):
             self.course_list = Student.objects.get(uid=uid).add_course
         else:
             return Response({'code':403,'msg':'未授权的请求'},status=403)
+        if len(self.course_list) < 1:
+            return Response({'code':200,'msg':'获取课程列表成功！','data':[]},status=200)
         for course in self.course_list:
             course.image=self.baseUrl+course.image
-            serializer = CourseSerializers(self.course_list,many=True)
-            logger.info('获取用户'+args.get('username')+'课程列表成功！')
-            return Response({'code':200,'msg':'获取课程列表成功！','data':serializer.data},status=200)
+        serializer = CourseSerializers(self.course_list,many=True)
+        logger.info('获取用户'+args.get('username')+'课程列表成功！')
+        return Response({'code':200,'msg':'获取课程列表成功！','data':serializer.data},status=200)
 
 
 class AddCourse(APIView):
