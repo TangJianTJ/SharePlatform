@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39f192cd-2383-42f8-a5f7-4af556fc7738" name="Default Changelist" comment="课程搜索">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
-    </list>
+    <list default="true" id="39f192cd-2383-42f8-a5f7-4af556fc7738" name="Default Changelist" comment="课程搜索" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -276,6 +273,7 @@
       <workItem from="1624345340151" duration="4000" />
       <workItem from="1624542566325" duration="1260000" />
       <workItem from="1624580445791" duration="2850000" />
+      <workItem from="1624709884764" duration="336000" />
     </task>
     <task id="LOCAL-00001" summary="add usercase">
       <created>1621498947980</created>
@@ -326,7 +324,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624255728807</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="课程搜索">
+      <created>1624710018115</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1624710018115</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
