@@ -2,16 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="39f192cd-2383-42f8-a5f7-4af556fc7738" name="Default Changelist" comment="课程搜索">
-      <change afterPath="$PROJECT_DIR$/media/files/高级软件工程/软件工程-码农的自我修养.pptx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/course/1.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media/images/course/software.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/login/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/login/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/serializers.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/serializers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/user/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/user/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -277,6 +269,13 @@
       <workItem from="1623997376908" duration="4475000" />
       <workItem from="1624022579828" duration="8181000" />
       <workItem from="1624247139681" duration="1387000" />
+      <workItem from="1624255661320" duration="73000" />
+      <workItem from="1624260972901" duration="826000" />
+      <workItem from="1624270244029" duration="962000" />
+      <workItem from="1624336461708" duration="1055000" />
+      <workItem from="1624345340151" duration="4000" />
+      <workItem from="1624542566325" duration="1260000" />
+      <workItem from="1624580445791" duration="2850000" />
     </task>
     <task id="LOCAL-00001" summary="add usercase">
       <created>1621498947980</created>
@@ -320,7 +319,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624006372364</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="课程搜索">
+      <created>1624255728807</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1624255728807</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">

@@ -3443,3 +3443,4 @@ AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse`
 2021-06-18 23:38:30,398  [INFO] 11680 --- [Thread-21] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
 2021-06-18 23:39:21,520  [INFO] 12716 --- [Thread-19] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
 2021-06-18 23:39:44,759  [INFO] 11680 --- [Thread-21] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-24 21:50:36,688  [INFO] 13832 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
