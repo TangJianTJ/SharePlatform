@@ -3444,3 +3444,1147 @@ AssertionError: Expected a `Response`, `HttpResponse` or `HttpStreamingResponse`
 2021-06-18 23:39:21,520  [INFO] 12716 --- [Thread-19] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
 2021-06-18 23:39:44,759  [INFO] 11680 --- [Thread-21] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
 2021-06-24 21:50:36,688  [INFO] 13832 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-26 22:05:46,356  [INFO] 2716 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-26 22:36:07,860  [INFO] 9060 --- [Thread-2] [resource.views:51][views:post]: folder is not exist
+2021-06-26 22:36:07,861  [INFO] 9060 --- [Thread-2] [resource.views:55][views:post]: 上传videolib_repo_2106_25_2srlpgiu4ih_SD_2srlpgiu4ih-mobile.mp4
+2021-06-26 22:36:55,286  [ERROR] 6300 --- [Thread-3] [django.request:230][log:log_response]: Internal Server Error: /course/resource/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 202, in _get_response
+    response = response.render()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\template\response.py", line 105, in render
+    self.content = self.rendered_content
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\response.py", line 70, in rendered_content
+    ret = renderer.render(self.data, accepted_media_type, context)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\renderers.py", line 103, in render
+    allow_nan=not self.strict, separators=separators
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\utils\json.py", line 25, in dumps
+    return json.dumps(*args, **kwargs)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\json\__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\utils\encoders.py", line 67, in default
+    return super().default(obj)
+  File "C:\Users\TJ\AppData\Local\Programs\Python\Python37\lib\json\encoder.py", line 179, in default
+    raise TypeError(f'Object of type {o.__class__.__name__} '
+TypeError: Object of type QuerySet is not JSON serializable
+2021-06-26 22:40:32,805  [WARNING] 1584 --- [Thread-2] [django.request:230][log:log_response]: Not Found: /favicon.ico
+2021-06-26 22:45:03,682  [ERROR] 10804 --- [Thread-2] [django.request:230][log:log_response]: Internal Server Error: /course/resource/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 91, in query
+    fields = _doc_cls._lookup_field(parts)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\base\document.py", line 1086, in _lookup_field
+    raise LookUpError('Cannot resolve field "%s"' % field_name)
+mongoengine.errors.LookUpError: Cannot resolve field "typ"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 162, in get
+    return Response({'code':201,'msg':'获取资源列表成功！','data':serializers1.data,'video':serializers2.data},status=200)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 745, in data
+    ret = super().data
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 664, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 664, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\queryset.py", line 110, in _iter_results
+    self._populate_cache()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\queryset.py", line 129, in _populate_cache
+    self._result_cache.append(next(self))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 149, in accept
+    self.children[i] = self.children[i].accept(visitor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 149, in accept
+    self.children[i] = self.children[i].accept(visitor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 93, in query
+    raise InvalidQueryError(e)
+mongoengine.errors.InvalidQueryError: Cannot resolve field "typ"
+2021-06-26 22:45:16,422  [ERROR] 4632 --- [Thread-1] [django.request:230][log:log_response]: Internal Server Error: /course/resource/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 91, in query
+    fields = _doc_cls._lookup_field(parts)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\base\document.py", line 1086, in _lookup_field
+    raise LookUpError('Cannot resolve field "%s"' % field_name)
+mongoengine.errors.LookUpError: Cannot resolve field "typ"
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 162, in get
+    return Response({'code':201,'msg':'获取资源列表成功！','data':serializers1.data,'video':serializers2.data},status=200)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 745, in data
+    ret = super().data
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 246, in data
+    self._data = self.to_representation(self.instance)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 664, in to_representation
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\serializers.py", line 664, in <listcomp>
+    self.child.to_representation(item) for item in iterable
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\queryset.py", line 110, in _iter_results
+    self._populate_cache()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\queryset.py", line 129, in _populate_cache
+    self._result_cache.append(next(self))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1666, in _cursor
+    self._cursor_obj = self._collection.find(self._query, **self._cursor_args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1715, in _query
+    self._mongo_query = self._query_obj.to_query(self._document)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 90, in to_query
+    query = query.accept(QueryCompilerVisitor(document))
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 149, in accept
+    self.children[i] = self.children[i].accept(visitor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 149, in accept
+    self.children[i] = self.children[i].accept(visitor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 185, in accept
+    return visitor.visit_query(self)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\visitor.py", line 79, in visit_query
+    return transform.query(self.document, **query.query)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\transform.py", line 93, in query
+    raise InvalidQueryError(e)
+mongoengine.errors.InvalidQueryError: Cannot resolve field "typ"
+2021-06-26 22:56:46,259  [INFO] 9260 --- [Thread-2] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-26 22:58:07,240  [WARNING] 14496 --- [Thread-4] [django.request:230][log:log_response]: Not Found: /media/java程序设计/videolib_repo_2106_25_2srlpgiu4ih_SD_2srlpgiu4ih-mobile.mp4
+2021-06-26 22:59:11,959  [WARNING] 8904 --- [Thread-5] [django.request:230][log:log_response]: Not Found: /media/java程序设计/videolib_repo_2106_25_2srlpgiu4ih_SD_2srlpgiu4ih-mobile.mp4
+2021-06-26 22:59:16,351  [WARNING] 1896 --- [Thread-8] [django.request:230][log:log_response]: Not Found: /media/java程序设计/videolib_repo_2106_25_2srlpgiu4ih_SD_2srlpgiu4ih-mobile.mp4
+2021-06-26 22:59:16,375  [WARNING] 10596 --- [Thread-9] [django.request:230][log:log_response]: Not Found: /media/java程序设计/videolib_repo_2106_25_2srlpgiu4ih_SD_2srlpgiu4ih-mobile.mp4
+2021-06-26 22:59:16,415  [WARNING] 13240 --- [Thread-6] [django.request:230][log:log_response]: Not Found: /media/java程序设计/videolib_repo_2106_25_2srlpgiu4ih_SD_2srlpgiu4ih-mobile.mp4
+2021-06-26 22:59:16,703  [WARNING] 13240 --- [Thread-6] [django.request:230][log:log_response]: Not Found: /favicon.ico
+2021-06-26 23:02:49,447  [WARNING] 7176 --- [Thread-10] [django.request:230][log:log_response]: Not Found: /favicon.ico
+2021-06-26 23:24:39,948  [INFO] 4064 --- [Thread-10] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-26 23:29:49,878  [INFO] 8012 --- [Thread-18] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-26 23:30:04,618  [INFO] 13040 --- [Thread-20] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-26 23:30:04,619  [INFO] 13040 --- [Thread-20] [login.views:36][views:post]: login success
+2021-06-26 23:31:12,237  [INFO] 1260 --- [Thread-21] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-26 23:34:53,113  [INFO] 1260 --- [Thread-21] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-26 23:38:06,949  [INFO] 7284 --- [Thread-23] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-26 23:38:26,949  [INFO] 7284 --- [Thread-23] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-26 23:39:20,524  [INFO] 7284 --- [Thread-23] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-26 23:40:15,927  [INFO] 7284 --- [Thread-23] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 17:06:18,029  [INFO] 1096 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 17:12:23,491  [INFO] 11976 --- [Thread-6] [course.views:142][views:post]: 上传1.jpg成功！
+2021-06-27 17:12:23,754  [ERROR] 8448 --- [Thread-7] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/1.jpg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 88, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 17:13:31,988  [INFO] 11976 --- [Thread-6] [course.views:142][views:post]: 上传b3cb73ad8410d72c0bcb5525857ff7f5.jpeg成功！
+2021-06-27 17:16:28,352  [INFO] 13168 --- [Thread-11] [course.views:142][views:post]: 上传91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg成功！
+2021-06-27 17:16:28,642  [ERROR] 7836 --- [Thread-12] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 88, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 17:16:33,430  [ERROR] 8748 --- [Thread-13] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 88, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 17:16:36,928  [ERROR] 9008 --- [Thread-14] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 88, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 17:16:43,393  [ERROR] 7688 --- [Thread-15] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 88, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 17:16:49,360  [ERROR] 12588 --- [Thread-16] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 88, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 17:28:17,798  [INFO] 6140 --- [Thread-17] [course.views:142][views:post]: 上传f66c128aa58addc331f492a595c4b4d7.jpeg成功！
+2021-06-27 17:28:21,462  [ERROR] 6140 --- [Thread-17] [django.request:230][log:log_response]: Internal Server Error: /course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 31, in post
+    course['overview'] = re.match(r'(<p.*?>)([\s\S].*?)</p>',request.data.get('overview')).group(2)  # 获取<p>标签内部文字
+AttributeError: 'NoneType' object has no attribute 'group'
+2021-06-27 17:28:30,468  [ERROR] 6140 --- [Thread-17] [django.request:230][log:log_response]: Internal Server Error: /course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 31, in post
+    course['overview'] = re.match(r'(<p.*?>)([\s\S].*?)</p>',request.data.get('overview')).group(2)  # 获取<p>标签内部文字
+AttributeError: 'NoneType' object has no attribute 'group'
+2021-06-27 17:28:41,682  [ERROR] 6140 --- [Thread-17] [django.request:230][log:log_response]: Internal Server Error: /course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 31, in post
+    course['overview'] = re.match(r'(<p.*?>)([\s\S].*?)</p>',request.data.get('overview')).group(2)  # 获取<p>标签内部文字
+AttributeError: 'NoneType' object has no attribute 'group'
+2021-06-27 17:29:40,820  [ERROR] 6140 --- [Thread-17] [django.request:230][log:log_response]: Internal Server Error: /course/
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\generic\base.py", line 70, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\login\login_token.py", line 92, in resolve_token1
+    return func(self,request,args)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 31, in post
+    course['overview'] = re.match(r'(<p.*?>)([\s\S].*?)</p>',request.data.get('overview')).group(2)  # 获取<p>标签内部文字
+AttributeError: 'NoneType' object has no attribute 'group'
+2021-06-27 17:33:02,793  [ERROR] 480 --- [Thread-6] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 89, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 17:33:31,221  [ERROR] 2296 --- [Thread-4] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 89, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 17:33:35,350  [ERROR] 11580 --- [Thread-5] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 89, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 17:34:16,134  [ERROR] 1004 --- [Thread-7] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 89, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 18:04:33,132  [INFO] 13740 --- [Thread-8] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 18:04:46,515  [INFO] 9244 --- [Thread-9] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 18:05:14,696  [INFO] 9244 --- [Thread-9] [user.views:45][views:put]: 修改sa20225555信息成功！
+2021-06-27 18:05:19,587  [INFO] 9244 --- [Thread-9] [user.views:45][views:put]: 修改sa20225555信息成功！
+2021-06-27 18:05:22,963  [INFO] 9244 --- [Thread-9] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 18:06:12,030  [ERROR] 8864 --- [Thread-11] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 89, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 18:06:32,521  [WARNING] 9244 --- [Thread-9] [django.request:230][log:log_response]: Forbidden: /course/
+2021-06-27 18:06:42,191  [WARNING] 9244 --- [Thread-9] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 18:06:42,515  [WARNING] 9244 --- [Thread-9] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 18:06:42,735  [WARNING] 9244 --- [Thread-9] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 18:06:43,079  [WARNING] 9244 --- [Thread-9] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 18:06:43,253  [WARNING] 9244 --- [Thread-9] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 18:06:43,619  [WARNING] 9244 --- [Thread-9] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 18:06:43,867  [WARNING] 9244 --- [Thread-9] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 18:06:44,171  [WARNING] 9244 --- [Thread-9] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 18:06:44,632  [WARNING] 9244 --- [Thread-9] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 18:07:11,329  [INFO] 6448 --- [Thread-14] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 18:07:13,122  [ERROR] 9064 --- [Thread-15] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 89, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 18:07:18,312  [INFO] 6448 --- [Thread-14] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 18:07:31,556  [ERROR] 15336 --- [Thread-16] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 89, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 18:11:29,887  [INFO] 6448 --- [Thread-14] [course.views:143][views:post]: 上传4c692be7a8788eb65664a9734176925e.jpeg成功！
+2021-06-27 18:11:56,623  [INFO] 6448 --- [Thread-14] [course.views:143][views:post]: 上传4c692be7a8788eb65664a9734176925e.jpeg成功！
+2021-06-27 18:15:06,147  [WARNING] 11728 --- [Thread-29] [django.request:230][log:log_response]: Not Found: /favicon.ico
+2021-06-27 18:16:07,566  [WARNING] 9360 --- [Thread-30] [django.request:230][log:log_response]: Not Found: /favicon.ico
+2021-06-27 18:19:51,425  [ERROR] 13188 --- [Thread-31] [django.request:230][log:log_response]: Internal Server Error: /media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 260, in get
+    result = next(queryset)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 1590, in __next__
+    raw_doc = next(self._cursor)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\pymongo\cursor.py", line 1215, in next
+    raise StopIteration
+StopIteration
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 76, in get_object_or_404
+    return queryset.get(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\mongoengine\queryset\base.py", line 263, in get
+    raise queryset._document.DoesNotExist(msg)
+course.models.DoesNotExist: Course matching query does not exist.
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\core\handlers\base.py", line 179, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\course\views.py", line 89, in retrieve
+    instance = self.get_object()
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 96, in get_object
+    obj = get_object_or_404(queryset, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\rest_framework\generics.py", line 19, in get_object_or_404
+    return _get_object_or_404(queryset, *filter_args, **filter_kwargs)
+  File "C:\Users\TJ\PycharmProjects\SharePlatform\venv\lib\site-packages\django\shortcuts.py", line 77, in get_object_or_404
+    except queryset.model.DoesNotExist:
+AttributeError: 'QuerySet' object has no attribute 'model'
+2021-06-27 18:23:07,964  [WARNING] 13556 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /media/images/course/8
+2021-06-27 18:23:09,933  [WARNING] 13556 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /media/images/course/8
+2021-06-27 18:23:11,088  [WARNING] 13556 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /media/images/course/8
+2021-06-27 18:23:23,352  [WARNING] 13556 --- [Thread-1] [django.request:230][log:log_response]: Not Found: /media/images/course/4
+2021-06-27 20:59:52,601  [INFO] 7440 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 21:07:11,138  [INFO] 13704 --- [Thread-8] [resource.views:55][views:post]: 上传Labsetup.zip
+2021-06-27 21:07:23,854  [INFO] 12616 --- [Thread-7] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:07:32,269  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:07:37,206  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:07:42,188  [INFO] 12616 --- [Thread-7] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:07:48,058  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:07:53,852  [INFO] 12616 --- [Thread-7] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:07:58,409  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:08:18,150  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:09:23,701  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:09:44,633  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:10:35,114  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:12:01,002  [INFO] 7128 --- [Thread-6] [course.views:143][views:post]: 上传36f6ea889794a08c3f063e7a390ae652.jpeg成功！
+2021-06-27 21:13:22,179  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:13:53,763  [WARNING] 5764 --- [Thread-9] [django.request:230][log:log_response]: Not Found: /media/images/course/
+2021-06-27 21:14:00,594  [INFO] 12616 --- [Thread-7] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:14:11,524  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:14:21,562  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:15:07,572  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:16:01,120  [INFO] 7128 --- [Thread-6] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:16:04,365  [INFO] 14812 --- [Thread-10] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:16:20,315  [INFO] 14812 --- [Thread-10] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:18:19,870  [INFO] 14812 --- [Thread-10] [user.views:45][views:put]: 修改sa20225555信息成功！
+2021-06-27 21:21:58,467  [INFO] 14812 --- [Thread-10] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:23:27,082  [INFO] 12616 --- [Thread-11] [resource.views:51][views:post]: folder is not exist
+2021-06-27 21:23:27,083  [INFO] 12616 --- [Thread-11] [resource.views:55][views:post]: 上传python.mp4
+2021-06-27 21:23:34,945  [INFO] 14812 --- [Thread-10] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:23:40,927  [INFO] 15352 --- [Thread-12] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:23:47,268  [INFO] 14812 --- [Thread-10] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:24:38,154  [INFO] 15352 --- [Thread-12] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 21:25:53,006  [INFO] 11132 --- [Thread-15] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 21:25:53,006  [INFO] 11132 --- [Thread-15] [login.views:36][views:post]: login success
+2021-06-27 21:25:57,724  [INFO] 11132 --- [Thread-15] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:26:28,386  [INFO] 11132 --- [Thread-15] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:26:35,854  [INFO] 9780 --- [Thread-16] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:26:44,388  [INFO] 11132 --- [Thread-15] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:26:51,132  [INFO] 11132 --- [Thread-15] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:27:10,485  [INFO] 11132 --- [Thread-15] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:27:51,156  [INFO] 11132 --- [Thread-15] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:28:19,984  [INFO] 9876 --- [Thread-25] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:28:28,832  [INFO] 10484 --- [Thread-26] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:28:35,829  [INFO] 1720 --- [Thread-24] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:28:52,185  [INFO] 1720 --- [Thread-24] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:29:12,814  [INFO] 10484 --- [Thread-26] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:29:28,963  [WARNING] 14936 --- [Thread-31] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 21:29:29,357  [WARNING] 14936 --- [Thread-31] [django.request:230][log:log_response]: Not Found: /favicon.ico
+2021-06-27 21:29:43,216  [WARNING] 14936 --- [Thread-31] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 21:29:57,484  [INFO] 8876 --- [Thread-30] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:30:18,307  [INFO] 8876 --- [Thread-30] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:30:53,587  [INFO] 8876 --- [Thread-30] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:30:58,288  [INFO] 10484 --- [Thread-26] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:31:24,813  [INFO] 8876 --- [Thread-30] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:34:23,022  [INFO] 8876 --- [Thread-30] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:34:25,211  [INFO] 7464 --- [Thread-35] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:34:36,267  [INFO] 7808 --- [Thread-34] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:35:40,861  [INFO] 3960 --- [Thread-37] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:35:52,556  [WARNING] 14792 --- [Thread-41] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 21:36:36,697  [INFO] 4080 --- [Thread-42] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:36:39,238  [INFO] 14568 --- [Thread-44] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:43:56,693  [INFO] 11344 --- [Thread-47] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 21:44:40,315  [INFO] 9576 --- [Thread-49] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 21:44:40,316  [INFO] 9576 --- [Thread-49] [login.views:36][views:post]: login success
+2021-06-27 21:44:43,189  [INFO] 9776 --- [Thread-50] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:45:22,503  [WARNING] 6500 --- [Thread-52] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 21:45:22,842  [WARNING] 6500 --- [Thread-52] [django.request:230][log:log_response]: Not Found: /favicon.ico
+2021-06-27 21:45:51,349  [INFO] 13376 --- [Thread-55] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:47:52,048  [INFO] 12412 --- [Thread-60] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:49:05,541  [INFO] 14176 --- [Thread-58] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:51:21,731  [INFO] 10976 --- [Thread-63] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:51:32,955  [INFO] 9824 --- [Thread-62] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:51:51,266  [INFO] 14176 --- [Thread-67] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:52:24,545  [INFO] 2980 --- [Thread-71] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:53:04,586  [INFO] 15172 --- [Thread-77] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:54:07,564  [INFO] 14988 --- [Thread-80] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:56:08,272  [INFO] 16152 --- [Thread-83] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 21:56:23,080  [INFO] 15596 --- [Thread-85] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 21:56:23,080  [INFO] 15596 --- [Thread-85] [login.views:36][views:post]: login success
+2021-06-27 21:56:36,263  [INFO] 15836 --- [Thread-87] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 21:59:17,593  [INFO] 15596 --- [Thread-85] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:01:10,383  [INFO] 15548 --- [Thread-93] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:01:36,367  [INFO] 16172 --- [Thread-94] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:01:54,446  [INFO] 15548 --- [Thread-93] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:02:55,244  [INFO] 10784 --- [Thread-96] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:03:02,639  [INFO] 16172 --- [Thread-94] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:05:03,740  [INFO] 14976 --- [Thread-104] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:06:02,044  [INFO] 14784 --- [Thread-102] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:06:18,979  [INFO] 14976 --- [Thread-104] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:06:23,723  [WARNING] 8284 --- [Thread-107] [django.request:230][log:log_response]: Forbidden: /user/info/
+2021-06-27 22:06:24,038  [WARNING] 8284 --- [Thread-107] [django.request:230][log:log_response]: Not Found: /favicon.ico
+2021-06-27 22:06:38,554  [INFO] 14784 --- [Thread-102] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:06:55,256  [INFO] 2760 --- [Thread-108] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:07:14,021  [INFO] 14976 --- [Thread-104] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:08:48,972  [INFO] 2760 --- [Thread-108] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:09:05,482  [INFO] 2760 --- [Thread-108] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:09:12,186  [INFO] 14784 --- [Thread-102] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:10:28,094  [INFO] 14784 --- [Thread-102] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:10:39,827  [INFO] 2760 --- [Thread-108] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:10:45,937  [INFO] 13772 --- [Thread-109] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:10:49,855  [INFO] 14784 --- [Thread-102] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:12:09,440  [INFO] 2760 --- [Thread-108] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:12:25,442  [INFO] 13772 --- [Thread-109] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:12:35,393  [INFO] 2760 --- [Thread-108] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:12:41,009  [INFO] 14784 --- [Thread-102] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:13:03,440  [INFO] 2760 --- [Thread-108] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:13:11,188  [INFO] 14784 --- [Thread-102] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:15:33,855  [INFO] 15392 --- [Thread-2] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:16:03,751  [INFO] 15392 --- [Thread-2] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:17:04,491  [INFO] 10760 --- [Thread-1] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:17:27,238  [INFO] 10760 --- [Thread-1] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:17:45,183  [INFO] 15392 --- [Thread-2] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:18:27,390  [INFO] 10760 --- [Thread-1] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:18:31,169  [INFO] 15392 --- [Thread-2] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:19:00,349  [INFO] 1420 --- [Thread-7] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:19:04,174  [INFO] 10760 --- [Thread-1] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:19:41,088  [INFO] 15392 --- [Thread-2] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:20:32,071  [INFO] 1420 --- [Thread-7] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:21:18,185  [INFO] 15392 --- [Thread-2] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:22:10,402  [INFO] 6168 --- [Thread-12] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 22:22:10,402  [INFO] 6168 --- [Thread-12] [login.views:36][views:post]: login success
+2021-06-27 22:22:14,088  [INFO] 6168 --- [Thread-12] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:29:43,446  [INFO] 2760 --- [Thread-19] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 22:29:43,447  [INFO] 2760 --- [Thread-19] [login.views:36][views:post]: login success
+2021-06-27 22:29:45,962  [INFO] 2760 --- [Thread-19] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:30:58,106  [INFO] 15500 --- [Thread-20] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:31:09,359  [INFO] 15320 --- [Thread-21] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:31:30,053  [INFO] 16004 --- [Thread-23] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 22:31:43,364  [INFO] 16004 --- [Thread-23] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 22:32:13,769  [INFO] 15744 --- [Thread-25] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 22:32:13,770  [INFO] 15744 --- [Thread-25] [login.views:36][views:post]: login success
+2021-06-27 22:32:22,046  [INFO] 15744 --- [Thread-25] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:32:39,263  [INFO] 15744 --- [Thread-25] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:34:43,837  [INFO] 5396 --- [Thread-26] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:40:49,686  [INFO] 13848 --- [Thread-29] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:41:27,955  [INFO] 8140 --- [Thread-30] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 22:41:43,296  [INFO] 8140 --- [Thread-30] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 22:43:12,678  [INFO] 8140 --- [Thread-30] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 22:43:17,700  [INFO] 8140 --- [Thread-30] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 22:43:29,084  [INFO] 13616 --- [Thread-31] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 22:43:29,084  [INFO] 13616 --- [Thread-31] [login.views:36][views:post]: login success
+2021-06-27 22:43:37,460  [INFO] 13616 --- [Thread-31] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:44:28,291  [INFO] 13616 --- [Thread-31] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:45:53,309  [INFO] 13616 --- [Thread-31] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:45:58,888  [INFO] 13616 --- [Thread-31] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:47:35,021  [INFO] 5756 --- [Thread-34] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:47:52,010  [INFO] 14824 --- [Thread-35] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:48:16,968  [INFO] 16008 --- [Thread-36] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:54:40,951  [INFO] 16540 --- [Thread-39] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 22:54:40,951  [INFO] 16540 --- [Thread-39] [login.views:36][views:post]: login success
+2021-06-27 22:54:46,652  [INFO] 16540 --- [Thread-39] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:55:04,305  [INFO] 17392 --- [Thread-42] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:55:06,672  [INFO] 16540 --- [Thread-39] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:55:13,309  [INFO] 17392 --- [Thread-42] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:55:15,846  [INFO] 16540 --- [Thread-39] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:55:17,813  [INFO] 17104 --- [Thread-41] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:55:59,132  [INFO] 17392 --- [Thread-42] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 22:56:06,869  [INFO] 17392 --- [Thread-42] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 22:56:52,861  [INFO] 16812 --- [Thread-43] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 22:56:52,861  [INFO] 16812 --- [Thread-43] [login.views:36][views:post]: login success
+2021-06-27 22:56:58,656  [INFO] 16812 --- [Thread-43] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 22:57:45,501  [INFO] 16048 --- [Thread-44] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 22:57:55,248  [INFO] 16048 --- [Thread-44] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 22:58:26,060  [INFO] 16344 --- [Thread-45] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 22:58:26,061  [INFO] 16344 --- [Thread-45] [login.views:36][views:post]: login success
+2021-06-27 22:58:41,078  [WARNING] 16344 --- [Thread-45] [django.request:230][log:log_response]: Bad Request: /user/info/
+2021-06-27 22:59:15,553  [INFO] 9776 --- [Thread-46] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 23:03:18,918  [INFO] 16344 --- [Thread-45] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 23:03:37,042  [INFO] 16344 --- [Thread-45] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-27 23:03:37,043  [INFO] 16344 --- [Thread-45] [login.views:36][views:post]: login success
+2021-06-27 23:04:28,477  [WARNING] 5756 --- [Thread-47] [django.request:230][log:log_response]: Bad Request: /user/info/
+2021-06-27 23:04:43,906  [INFO] 5756 --- [Thread-47] [user.views:45][views:put]: 修改sa20226666信息成功！
+2021-06-27 23:04:52,457  [INFO] 10916 --- [Thread-48] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 23:05:37,912  [INFO] 10916 --- [Thread-48] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 23:05:40,364  [INFO] 10916 --- [Thread-48] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 23:05:47,621  [INFO] 10916 --- [Thread-48] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 23:05:50,373  [INFO] 10916 --- [Thread-48] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 23:05:52,661  [INFO] 10916 --- [Thread-48] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 23:05:57,396  [INFO] 10916 --- [Thread-48] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-27 23:06:48,230  [INFO] 15376 --- [Thread-49] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-27 23:09:06,440  [INFO] 15376 --- [Thread-49] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 23:12:35,216  [INFO] 3744 --- [Thread-55] [resource.views:55][views:post]: 上传java教程.mp4
+2021-06-27 23:13:55,787  [INFO] 15464 --- [Thread-57] [resource.views:55][views:post]: 上传javaSE02.mp4
+2021-06-27 23:17:21,286  [INFO] 2164 --- [Thread-61] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-27 23:17:29,864  [INFO] 2164 --- [Thread-61] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-28 23:03:33,750  [INFO] 14760 --- [Thread-1] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-28 23:30:17,343  [INFO] 17108 --- [Thread-14] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-28 23:36:12,922  [INFO] 17108 --- [Thread-14] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-28 23:36:23,106  [INFO] 17108 --- [Thread-14] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-28 23:37:55,528  [INFO] 17108 --- [Thread-14] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-28 23:38:54,394  [INFO] 14500 --- [Thread-21] [login.views:53][views:post]: 教师sa20225555登录成功！
+2021-06-28 23:40:35,390  [INFO] 14500 --- [Thread-21] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-28 23:41:10,514  [INFO] 17260 --- [Thread-22] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-28 23:41:14,200  [INFO] 17260 --- [Thread-22] [user.views:79][views:get]: 获取用户sa20225555课程列表成功！
+2021-06-28 23:42:13,667  [INFO] 12728 --- [Thread-25] [login.views:35][views:post]: 学生sa20226666登录成功！
+2021-06-28 23:42:13,668  [INFO] 12728 --- [Thread-25] [login.views:36][views:post]: login success
+2021-06-28 23:42:16,702  [INFO] 12728 --- [Thread-25] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！
+2021-06-28 23:42:25,340  [INFO] 12728 --- [Thread-25] [user.views:79][views:get]: 获取用户sa20226666课程列表成功！

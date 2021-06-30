@@ -11,7 +11,7 @@ from rest_framework.viewsets import ModelViewSet
 from SharePlatform.settings import MEDIA_ROOT,BASE_URL
 from resource.models import Resource
 from resource.serializers import ResourceSerializers
-
+from mongoengine import Q
 # Create your views here.
 """"
 创建课程的视图函数
@@ -28,7 +28,8 @@ class CourseView(APIView):
         course = request.data.copy()           # query_dict不可变，从此需要copy
         course['owner_id'] = args.get('uid')  # 创建人的uid
         # course['owner_name'] = args.get('name')  # 创建人的name
-        course['overview'] = re.match(r'(<p.*?>)([\s\S].*?)</p>',request.data.get('overview')).group(2)  # 获取<p>标签内部文字
+        if re.match(r'(<p.*?>)([\s\S].*?)</p>',request.data.get('overview')):
+            course['overview'] = re.match(r'(<p.*?>)([\s\S].*?)</p>',request.data.get('overview')).group(2)  # 获取<p>标签内部文字
         image_name= os.path.split(course.get('image'))[1]
         course['image'] = 'images/course' + '/' + image_name
         if args.get('role',None) == 'student':
@@ -147,6 +148,7 @@ class CourseUpload(APIView):
 
 class CourseResource(APIView):
     permission_classes = []
+    baseUrl = BASE_URL
 
     def get(self,request):
         course_id = request.query_params.get('id')
@@ -154,16 +156,20 @@ class CourseResource(APIView):
         if course_id:
             course = Course.objects.get(id=course_id)
             resource_list = Resource.objects.filter(course=course)
+            video_list = Resource.objects.filter(course=course).filter(Q(type='mp4') | Q(type='flv') | Q(type='avi'))
+            if len(video_list) >0:
+                for item in video_list:
+                    item.path.replace('\\','/')
+                    item.path=self.baseUrl+'files/'+item.path
             if len(resource_list) >0:
-                serializers = ResourceSerializers(resource_list, many=True)
+                serializers1 = ResourceSerializers(resource_list, many=True)
+                serializers2 = ResourceSerializers(video_list, many=True)
                 logger.info('获取资源列表成功')
-                return Response({'code':201,'msg':'获取资源列表成功！','data':serializers.data},status=200)
+                return Response({'code':201,'msg':'获取资源列表成功！','data':serializers1.data,'video':serializers2.data},status=200)
             else:
-                return Response({'code': 200, 'msg': '暂无课程资源', 'data': []}, status=200)
+                return Response({'code': 200, 'msg': '暂无课程资源', 'data': [],'video':[]}, status=200)
         else:
             return Response({'code':400,'msg':'请求参数错误！'},status=400)
-
-
 
 
 

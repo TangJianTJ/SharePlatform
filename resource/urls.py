@@ -13,7 +13,7 @@ from .views import *
 
 urlpatterns = [
     path('course/uploadFiles/',FileUploadView.as_view()),
-    re_path('course/resource/download/(?P<resource_id>\\d+)',FileDownloadView.as_view()),
+    re_path('^course/resource/download/(?P<resource_id>\\d+)',FileDownloadView.as_view()),
     path('downloadFiles',FileDownloadView.as_view()),
     path('preview/',preview)
 ]

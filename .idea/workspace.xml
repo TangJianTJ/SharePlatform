@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="39f192cd-2383-42f8-a5f7-4af556fc7738" name="Default Changelist" comment="课程搜索" />
+    <list default="true" id="39f192cd-2383-42f8-a5f7-4af556fc7738" name="Default Changelist" comment="课程搜索">
+      <change afterPath="$PROJECT_DIR$/media/files/Python/Labsetup.zip" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/files/java程序设计/javaSE01.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/files/java程序设计/javaSE02.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/files/java程序设计/java教程.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/files/计算机组成原理/python.mp4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/course/36f6ea889794a08c3f063e7a390ae652.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/course/4c692be7a8788eb65664a9734176925e.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/course/91a67c2a6aa68c4ebb07ae57c2f8d2e5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/course/b3cb73ad8410d72c0bcb5525857ff7f5.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/media/images/course/f66c128aa58addc331f492a595c4b4d7.jpeg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/course/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/course/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/all.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/all.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/images/course/1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/media/images/course/1.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/resource/urls.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -273,7 +290,10 @@
       <workItem from="1624345340151" duration="4000" />
       <workItem from="1624542566325" duration="1260000" />
       <workItem from="1624580445791" duration="2850000" />
-      <workItem from="1624709884764" duration="336000" />
+      <workItem from="1624709884764" duration="1748000" />
+      <workItem from="1624716082453" duration="5708000" />
+      <workItem from="1624784275199" duration="13145000" />
+      <workItem from="1624892409675" duration="1333000" />
     </task>
     <task id="LOCAL-00001" summary="add usercase">
       <created>1621498947980</created>
@@ -331,7 +351,14 @@
       <option name="project" value="LOCAL" />
       <updated>1624710018115</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="课程搜索">
+      <created>1624710320324</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1624710320324</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
